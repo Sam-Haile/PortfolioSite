@@ -1,0 +1,48 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Remove underline from link in its normal state */
+a {
+  text-decoration: none;
+  color: #7f7f83;
+}
+
+/* Remove underline from link when it's hovered over */
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* Remove underline from link when it's active (being pressed) */
+a:active {
+  text-decoration: none;
+}
+
+/* Remove underline from link once it has been visited */
+a:visited {
+  text-decoration: none;
+}
+
+
+@font-face {
+  font-family: 'Recoleta';
+  src: local('Recoleta Medium'), local('Recoleta-Medium'),
+      url('../media/Recoleta/Recoleta-Medium.woff2') format('woff2'),
+      url('../media/Recoleta/Recoleta-Medium.woff') format('woff'),
+      url('../media/Recoleta/Recoleta-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SanfordBook';
+  src: local('SanfordBook'),
+      url('../media/SanfordBook/SanfordBook.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
