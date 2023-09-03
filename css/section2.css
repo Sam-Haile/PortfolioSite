@@ -1,5 +1,6 @@
 .languages_frameworks{
     margin-left: 13%;
+    padding: 50px 0px;
 }
 
 .grid-container {
@@ -11,11 +12,19 @@
     border-radius: 10px;
     background-color: #100f0f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'SanfordBook';
+}
+
+.grid-container img{
+    width: 50px;
+    height: auto;
+    padding-right: 5%;
 }
 
 .grid-item {
+    display: flex;
     padding: 20px;
-    background-color: #1f497a;
+    background-color: rgb(33, 32, 37);
     color: white;
     text-align: left;
     border-radius: 0px;
@@ -24,7 +33,11 @@
     border-left: solid;
     border-color: rgb(52, 46, 74);
     border-width: 2px;
+    align-items: center;     /* Vertically center */
 }
+
+
+
 
 .grid-item:hover {
     transform: scale(1.05);
