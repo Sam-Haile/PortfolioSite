@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/pageStyle.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
+    <title>Tales of Trove</title>
+    <style>
+        li::before {
+            content: "■";
+            display: inline-block;
+            width: 1em;
+            margin-left: 1px;
+            margin-top: 10px;
+            color: rgb(209, 120, 46);
+        }
+
+        a:hover {
+            color: rgb(209, 120, 46);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            
+            <div class="navigation">
+                <div class="one"><a href="../../index.html">Samuel Haile</a></div>
+                <div class="two"><a href="../../index.html">Projects</a></div>
+                <div class="three"><a href="../../media/Haile_Samuel_Resume.pdf">Resume</a></div>
+                <div class="five"><a href="../../index.html"><i class="fa fa-home"></i></a></div>
+            </div>
+
+            <div id="wrapper">
+                <header>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="media/Game1/TitleScreen.png" alt="Titlescreen" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="media/Game1/gameplay1.png" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="media/Game1/gameplay2.png" alt="Gameplay Image 2" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="media/Game1/gameplay3.png" alt="Gameplay Image 3" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="dots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                        </div>
+
+                    </div>
+                </header>
+
+                <article>
+                    <section class id="key_features">
+                        <h2>Key Features</h2>
+                        <p>While the game is still being polished and all the levels are not completed. The main
+                            functionality is present and the player is able to interact with the world in a cohesive
+                            manner. Apart from enviornmental assets, all other assets were created by me.</p>
+                    </section>
+                </article>
+
+                <section>
+                    <section class id="development">
+                        <div class="articleTwo">
+                            <h2>Development</h2>
+                            <h3 style="color: rgb(209, 120, 46);">What can I do?</h3>
+                            <p>The player comes equipped with a sword that can strike in all directions, making sure any
+                                threat
+                                can
+                                be taken care of. In addition, the player is able to counter enemy attacks. If timed
+                                correctly,
+                                the
+                                enemy will recieve damage and be launched back. Stuck in a tight spot? Try jumping off
+                                walls or
+                                climbing them to evade your pursuers.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <aside>
+                    <img src="media/Game1/gems.png" alt="Image of game collectibles" width="100" height="30">
+                    <h1 style="font-size: 50px;">Tales Of Trove</h1>
+                    <h4>
+                        <a href="media/Game1/TalesOfTrove.zip" download>Play Game</a>
+                        <span style="margin: 0 10px;"></span> <!-- Adds horizontal space -->
+                        <a href="https://github.com/Sam-Haile/TalesOfTrove/tree/main/Assets/Game/Scripts"
+                            target="_blank"> View Repository</a>
+                    </h4>
+                    <ul class="redSquares">
+                        <li>Tales of Trove is a personal passion project that I have been working on in my spare time.
+                            Throughout the process of creating this game, I gained a lot of experience while working in
+                            the Unity engine that can be utilized in future projects whether on Unity or in another
+                            framework
+                        </li>
+                        <li>Date: December 2022 - January 2023</li>
+                        <li>Languages: C#</li>
+                        <li>Engine: Unity</li>
+                        <li>Genre: Platformer, Action</li>
+                        <li>Individual or Group? Individual</li>
+                    </ul>
+                </aside>
+
+            </div>
+
+            <footer id="footer">
+                <div class="footerLink">
+                    <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                    <a href="../../media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                    <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

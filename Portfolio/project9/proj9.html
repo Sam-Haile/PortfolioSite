@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/pageStyle.css">
+    <link rel="stylesheet" href="../../css/smallNav.css">
+    <link rel="stylesheet" href="../../css/fontStyle.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
+    <title>Rhythm Riot</title>
+    <style>
+        li::before {
+            content: "■";
+            display: inline-block;
+            width: 1em;
+            margin-left: 1px;
+            margin-top: 10px;
+            color: rgb(57, 233, 151); 
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="navigation">
+                <div class="one"><a href="../../index.html">Samuel Haile</a></div>
+                <div class="two"><a href="../../index.html">Projects</a></div>
+                <div class="three"><a href="../../media/Haile_Samuel_Resume.pdf">Resume</a></div>
+                <div class="five"><a href="../../index.html"><i class="fa fa-home"></i></a></div>
+            </div>
+
+            <div id="wrapper">
+                <header>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="media/Game9/TitleScreen.png" alt="Titlescreen" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="media/Game9/gameplay1.png" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="media/Game9/gameplay3.png" alt="Gameplay Image 3" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="media/Game9/gameplay4.png" alt="Gameplay Image 4" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="dots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                        </div>
+                    </div>
+
+                </header>
+
+                <article>
+                    <section class id="key_features">
+                        <h2>Key Features</h2>
+                        <p>With this game, I tried to capture the essence of the mid-2000s punk aesthetic. Jet grind Radio became a big
+                            influence on the art direction for this game. Infused with a vibrant and cartoony art style, the
+                            game's visuals transport you into a colorful world filled with graffiti, urban landscapes, and rebellious character
+                            designs, creating a visually captivating atmosphere.
+                        </p>
+                    </section>
+                </article>
+
+                <section>
+                    <section class id="development">
+                        <div class="articleTwo">
+                            <h2>Development</h2>
+                            <h3 style="color: rgb(57, 233, 151);">What can I do?</h3>
+                            <p>Challenge yourself to achieve the highest score possible as you collect notes and spray
+                                cans scattered throughout the level. The scoring system takes into account your accuracy
+                                in hitting the beats and your ability to strategically collect the spray cans. Strive
+                                for perfection and aim to get a new highscore!
+                            </p>
+                        </div>
+                    </section>
+                </section>
+
+                <aside>
+                    <img src="media/Game9/gems.png" alt="Image of game collectibles" width="100" height="30">
+                    <h1 style="font-size: 50px;">Rhythm Riot</h1>
+                    <h4>
+                        <a href="media/Game9/RhythmRiot.zip" download>Play Game</a> 
+                        <span style="margin: 0 10px;"></span> <!-- Adds horizontal space -->
+                        <a href="https://github.com/Sam-Haile/Rhythm-Riot/tree/main/Assets/Game/Scripts" target="_blank"> View Repository</a>
+                    </h4>
+                    <ul class="redSquares">
+                        <li>Rhythm Riot combines the excitement of platforming with the precision of rhythm-based
+                            gameplay. Players must navigate a continuous roller skating experience, jumping between platforms
+                            and floor levels, all while collecting notes to the beat of the music.
+                        </li>
+                        <li>Date: May 2023 - June 2023</li>
+                        <li>Languages: C#</li>
+                        <li>Engine: Unity</li>
+                        <li>Genre: Rhythm, Platformer</li>
+                        <li>Individual or Group? Individual</li>
+                        
+                    </ul>
+                </aside>
+
+            </div>
+
+            <footer id="footer">
+                <div class="footerLink">
+                    <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                    <a href="../../media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                    <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

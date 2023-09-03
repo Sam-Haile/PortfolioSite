@@ -6,6 +6,73 @@ body {
   height: 100%;
 }
 
+
+@font-face {
+  font-family: 'Recoleta';
+  src: local('Recoleta Medium'), local('Recoleta-Medium'),
+    url('../media/Recoleta/Recoleta-Medium.woff2') format('woff2'),
+    url('../media/Recoleta/Recoleta-Medium.woff') format('woff'),
+    url('../media/Recoleta/Recoleta-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SanfordBook';
+  src: local('SanfordBook'),
+    url('../media/SanfordBook/SanfordBook.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rianti';
+  src: local('Rianti'),
+      url('../media/Rianti/Rianti.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Styles for button*/
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 13%;
+}
+
+.buttons>div {
+  border-radius: 5px;
+  /* Set a specific width for each button */
+  width: 100px;
+  /* Set a specific height for each button */
+  height: 50px;
+  /* To center the content inside each button */
+  display: flex;
+  /* Center content vertically */
+  align-items: center;
+}
+
+.buttons>div:last-child {
+  /* Remove the right margin for the last button to avoid extra spacing on the right */
+  margin-right: 0;
+}
+
+.homeButton img {
+  width: auto;
+  height: 65px;
+}
+
+.homeButton {
+  margin-right: 50px;
+  padding-top: 5px;
+}
+
+.projectsButton,
+.blogButton {
+  padding-right: 0%;
+}
+
 /* 3 sections of home page */
 .parent {
   display: grid;
@@ -26,12 +93,19 @@ body {
   background-color: #1e1d21;
 }
 
+.section2 h1{
+  padding-left: 15%;
+}
+
+.section3 h1{
+  padding-left: 15%;
+}
 .section3 {
   grid-area: 3 / 1 / 4 / 2;
   background-color: rgb(33, 32, 37);
 }
 
-h1{
+.parent h1, h2{
   font-family: 'Recoleta';
 }
 
@@ -55,23 +129,4 @@ a:active {
 /* Remove underline from link once it has been visited */
 a:visited {
   text-decoration: none;
-}
-
-
-@font-face {
-  font-family: 'Recoleta';
-  src: local('Recoleta Medium'), local('Recoleta-Medium'),
-      url('../media/Recoleta/Recoleta-Medium.woff2') format('woff2'),
-      url('../media/Recoleta/Recoleta-Medium.woff') format('woff'),
-      url('../media/Recoleta/Recoleta-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SanfordBook';
-  src: local('SanfordBook'),
-      url('../media/SanfordBook/SanfordBook.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
 }

@@ -1,0 +1,68 @@
+html,
+body {
+    padding: 0;
+    height: 100%;
+    color: white;
+}
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 20);
+}
+
+p {
+    font-family: 'SanfordBook';
+}
+
+div {
+    background-color: rgb(33, 32, 37);
+}
+
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blog-page h1,
+h2 {
+    font-family: 'Rianti';
+}
+
+.item1 {
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #1e1d21;
+}
+
+.item1 h1, p
+{
+    text-align: center;
+    padding: 0px 20%;
+}
+
+.item1 p {
+    padding-top: 50px;
+}
+
+.item2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.item3 {
+    flex-grow: 1;
+}
+
+.buttons{
+    background-color: #1e1d21;
+}
+
+.item2, .item3{
+    padding-left: 13%;
+    padding-top: 25px;
+}
+

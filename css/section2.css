@@ -1,5 +1,4 @@
 .languages_frameworks{
-    margin-left: 13%;
     padding: 50px 0px;
 }
 
@@ -7,12 +6,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    width: 80%;
+    width: 50%;
     padding: 20px;
     border-radius: 10px;
     background-color: #100f0f;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'SanfordBook';
+    margin-left: 13%;
 }
 
 .grid-container img{
@@ -35,9 +35,6 @@
     border-width: 2px;
     align-items: center;     /* Vertically center */
 }
-
-
-
 
 .grid-item:hover {
     transform: scale(1.05);

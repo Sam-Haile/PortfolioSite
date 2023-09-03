@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/pageStyle.css">
+    <link rel="stylesheet" href="../../css/smallNav.css">
+    <link rel="stylesheet" href="../../css/fontStyle.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
+    <title>Jungle Escape</title>
+    <style>
+        li::before {
+            content: "■";
+            display: inline-block;
+            width: 1em;
+            margin-left: 1px;
+            margin-top: 10px;
+            color: rgb(109, 135, 136); 
+        }
+        a:hover {
+            color: rgb(109, 135, 136);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Projects</a>
+        <a href="../../media/Haile_Samuel_Resume.pdf">Resume</a>
+    </div>
+
+    <div class="headers">
+        <div>
+            <h3><a href="../../index.html">Samuel Haile</a></h3>
+        </div>
+        <div><button class="openbtn" onclick="openNav()">☰</button> </div>
+    </div>
+
+    <div id="page-container">
+
+        <div id="content-wrap">
+            <div class="navigation">
+                <div class="one"><a href="../../index.html">Samuel Haile</a></div>
+                <div class="two"><a href="../../index.html">Projects</a></div>
+                <div class="three"><a href="../../media/Haile_Samuel_Resume.pdf">Resume</a></div>
+                <div class="five"><a href="../../index.html"><i class="fa fa-home"></i></a></div>
+            </div>
+
+            <div id="wrapper">
+                <header>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="media/TitleScreen.png" alt="Titlescreen" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="media/gameplay2.png" alt="Gameplay Image 2" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="media/gameplay1.png" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="dots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+                </header>
+
+
+                <article>
+                    <section class id="key_features">
+                        <h2>Key Features</h2>
+                        <p> Using a series of 2D arrays, I can create any shape of platform for the player to run on.
+                            Levels are instantiated with these platforms and get progressivley more difficult as the
+                            player progresses.</p>
+                    </section>
+                </article>
+
+                <section>
+                    <section class id="development">
+                        <div class="articleTwo">
+                            <h2>Development</h2>
+                            <h3 style="color: rgb(109, 135, 136);">What can I do?</h3>
+                            <p>Run through a series of platforms and make it to the end of the level.</p>
+                        </div>
+                    </section>
+                </section>
+
+                <aside>
+                    <img src="media/playerFace.png" alt="Image of game collectibles" width="200" height="30">
+                    <h1 style="font-size: 50px;">Jungle Escape</h1>
+                    <h4><a href="https://people.rit.edu/sdh5898/235/Projects/project3/project.html" target="_blank">Play
+                            Game</a>
+                        &emsp; <a href="https://github.com/Sam-Haile/IGME-235/tree/main/project3" target="_blank"> View
+                            Repository</a>
+                    </h4>
+                    <ul class="redSquares">
+                        <li> Our goal for this project was to create a functional game or interactive experience using
+                            JavaScript and PixiJS. Evaluated on our creativity, the quality of our work and the
+                            soundness
+                            of our programming.</li>
+                        <li>Date: December 2022 </li>
+                        <li>Languages: Javascript, HTML, CSS</li>
+                        <li>Engine: PixiJS</li>
+                        <li>Genre: Platformer</li>
+                        <li>Individual or Group? Individual</li>
+                        
+                    </ul>
+                </aside>
+
+            </div>
+            <footer id="footer">
+                <div class="footerLink">
+                    <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                    <a href="../../media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                    <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

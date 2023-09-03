@@ -31,50 +31,7 @@
     height: 100%;
     width: auto;
   }
-  
-  /* Styles for the buttons top left of the page*/
-  .buttons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 30%;
-  }
-  
-  .buttons>div {
-    border-radius: 5px;
-    /* Set a specific width for each button */
-    width: 100px;
-    /* Set a specific height for each button */
-    height: 50px;
-    /* To center the content inside each button */
-    display: flex;
-    /* Center content vertically */
-    align-items: center;
-  }
-  
-  .buttons>div:last-child {
-    /* Remove the right margin for the last button to avoid extra spacing on the right */
-    margin-right: 0;
-  }
-  
-  .homeButton img {
-    width: auto;
-    height: 65px;
-  }
-  
-  .homeButton {
-    margin-right: 90px;
-    padding-top: 5px;
-  }
-  
-  .projectsButton,
-  .blogButton {
-    padding-right: 10%;
-  }
-  
-  
-  
-  
+ 
   /* The three text areas in the intro*/
   .intro_text {
     display: flex;

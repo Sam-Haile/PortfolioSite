@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/pageStyle.css">
+    <link rel="stylesheet" href="../../css/smallNav.css">
+    <link rel="stylesheet" href="../../css/fontStyle.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
+    <title>2 Weeks to Die</title>
+    <style>
+        li::before {
+            content: "■";
+            display: inline-block;
+            width: 1em;
+            margin-left: 1px;
+            margin-top: 10px;
+            color: rgb(58, 58, 58); 
+        }
+        a:hover {
+            color: rgb(58, 58, 58);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../index.html">Projects</a>
+        <a href="../../media/Haile_Samuel_Resume.pdf">Resume</a>
+    </div>
+
+    <div class="headers">
+        <div>
+            <h3><a href="../../index.html">Samuel Haile</a></h3>
+        </div>
+        <div><button class="openbtn" onclick="openNav()">☰</button> </div>
+    </div>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="navigation">
+                <div class="one"><a href="../../index.html">Samuel Haile</a></div>
+                <div class="two"><a href="../../index.html">Projects</a></div>
+                <div class="three"><a href="../../media/Haile_Samuel_Resume.pdf">Resume</a></div>
+                <div class="five"><a href="../../index.html"><i class="fa fa-home"></i></a></div>
+            </div>
+
+            <div id="wrapper">
+                <header>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="media/Game11/TitleScreen.png" alt="Titlescreen" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="media/Game11/gameplay1.png" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="media/Game11/gameplay2.png" alt="Gameplay Image 2" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="media/Game11/gameplay3.png" alt="Gameplay Image 3" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="media/Game11/gameplay4.png" alt="Gameplay Image 4" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="dots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                        </div>
+                    </div>
+
+                </header>
+
+                <article style="background-color: rgb(58, 58, 58); color: whitesmoke;">
+                    <section class id="key_features">
+                        <h2>Key Features</h2>
+                        <p>Mechanically, both the investigators and the murderer have distinct abilities at their
+                            disposal to win the game. Investigators can collect clues while the murderer can create
+                            roadblocks, knock investigators unconscious or even kill them. </p>
+                    </section>
+                </article>
+
+                <section>
+                    <section class id="development">
+                        <div class="articleTwo">
+                            <h2>Development</h2>
+                            <h3 style="color: rgb(255, 255, 255);">What can I do?</h3>
+                            <p>At its core, 2 Weeks to Die is a combination of deduction and hidden information. Players
+                                take on the role of investigators, attempting to find various clues and find the murderer. 
+                                To add an element of strategy, the murderer has various abilities that allow him to mislead investigators. 
+                                Overall, the game requires players to think critically and strategically while also providing 
+                                opportunities for social interaction and deception.
+                            </p>
+                        </div>
+                    </section>
+                </section>
+
+                <aside>
+                    <h1 style="font-size: 50px;">2 Weeks to Die</h1>
+                    <h4>
+                        <a href="https://www.youtube.com/watch?v=gvKem33TOEQ&ab_channel=JasonWeinberg">Post Mortem</a>
+                        <span style="margin: 0 10px;"></span> <!-- Adds horizontal space -->
+                        <a href="https://youtu.be/pOkkOs11gUY">How to Play</a>
+                        <span style="margin: 0 10px;"></span> <!-- Adds horizontal space -->
+                        <a href="https://docs.google.com/document/d/1Qf7Qh6X8DVluC5YzUQRZXk_cg_D9z3JXhD5CMHZXlBs/edit?usp=sharing"
+                            target="_blank"> Design Doc</a>
+                    </h4>
+                    <ul class="redSquares">
+                        <li>This project was instrumental in my understanding of the core game design process. It encompassed various stages,
+                            from ideation to structured brainstorming, while exploring industry-standard processes and techniques for
+                            documenting and managing the design process. Throughout the game's development, I focused on techniques for
+                            evaluating and validating design choices, fostering innovation and creativity within the game development context,
+                            and honing skills in world and character design.
+                        </li>
+                        <li>Date: February 2023 - May 2023</li>
+                        <li>Platform: Tabletop Simulator</li>
+                        <li>Genre: Boardgame</li>
+                        <li>Individual or Group? Group</li>
+                        
+                    </ul>
+                </aside>
+
+            </div>
+
+            <footer id="footer">
+                <div class="footerLink">
+                    <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                    <a href="../../media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                    <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>
