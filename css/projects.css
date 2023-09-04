@@ -1,186 +1,448 @@
-.portfolio-buttons * {
+html,
+body {
     margin: 0;
-    padding: 0;
-    border: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(16, 16, 16);
+    color: white;
 }
 
-.portfolio-buttons img {
-    width: 100%;
+a,
+h3,
+h4 {
+    font-family: 'Avenir';
+}
+h4{
+    margin: 0px;
+}
+p {
+    font-family: 'AvenirLight';
+}
+
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.redSquares li {
+    margin-bottom: 40px;
+}
+
+/* By default, hide the button */
+.headers {
+    display: none;
+}
+
+.headers div:last-child {
+    margin-left: auto;
+    padding-right: 10%;
+}
+
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 30% 30% auto;
+        grid-template-areas:
+            "header header sidebar"
+            "section article sidebar"
+            "footer footer footer"
+    }
+}
+
+/*HEADER code*/
+header {
+    grid-area: header;
+    overflow: hidden;
+}
+
+button {
+    display: inline-block;
+    margin-left: 85%;
+}
+
+small {
+    color: white;
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
     height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+    top: 0;
+    right: 0;
+    background-color: rgb(16, 16, 16);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.portfolio-buttons h1 {
-    padding-bottom: 8%;
-    padding-top: 15%;
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.portfolio-buttons span,
-.portfolio-buttons p {
-    font-size: 25px;
+.sidepanel a:hover {
+    color: #f1f1f1;
 }
 
-.portfolio-buttons a:link,
-.portfolio-buttons a:visited,
-.portfolio-buttons a:hover,
-.portfolio-buttons a:active {
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.navigation {
+    padding: 10px 10px;
+    background: rgb(16, 16, 16);
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 99;
+}
+
+.one {
+    flex: 3;
+}
+
+.two {
+    flex: 1;
+}
+
+.three {
+    flex: 1;
+}
+
+.four {
+    flex: 1;
+}
+
+.five {
+    flex: 1;
+}
+
+/* unvisited link */
+a:link {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-.portfolio-buttons a:hover {
-    color: #9C84B8;
+/* visited link */
+a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
-/* Overlays */
-.portfolio-buttons .black_overlay {
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=80);
+/* mouse over link */
+a:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
-.portfolio-buttons .white_content {
-    display: none;
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    padding: 16px;
-    border: 16px solid #9C84B8;
-    background-color: rgb(3, 3, 3);
-    z-index: 1002;
-    overflow: auto;
+/* selected link */
+a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
-/* Links */
-.portfolio-buttons .links {
-    background-color: rgb(16, 16, 16);
-    padding-top: 10px;
-    padding-bottom: 10px;
+/*End of header code*/
+
+
+/*DEVELOPMENT section*/
+section {
+    grid-area: section;
 }
 
-/* Grid */
-.portfolio-buttons .project {
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 75%;
-    margin: 0 auto; /* Centers the grid horizontally */
-    justify-content: center; /* Centers the grid items horizontally */
-    align-items: center; /* Centers the grid items vertically */
+.section {
+    margin-left: 50px;
+    padding-top: 40px;
+    overflow: visible;
 }
 
-.portfolio-buttons .div1,
-.portfolio-buttons .div2,
-.portfolio-buttons .div3 {
-    padding: 20px 40px;
+
+/*End of development section*/
+
+
+/*KEY FEATURES section*/
+article {
+    background-color: rgb(58, 58, 58);
+    color: whitesmoke;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    grid-area: article;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
 }
 
-.portfolio-buttons .div1 {
-    grid-area: 1 / 1 / 2 / 2;
+/*End of key feautures section*/
+
+/*SIDEBAR section*/
+aside {
+    grid-area: sidebar;
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 20%;
 }
 
-.portfolio-buttons .div2 {
-    grid-area: 1 / 2 / 2 / 3;
+
+li::before {
+    content: "■";
+    display: inline-block;
+    width: 1em;
+    margin-left: 1px;
+    margin-top: 10px;
 }
 
-.portfolio-buttons .div3 {
-    grid-area: 1 / 3 / 2 / 4;
-}
+/*end of sidbar section*/
 
-/* Image wraps */
-.portfolio-buttons .img__wrap {
-    position: relative;
-}
-
-.portfolio-buttons .img__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 25px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(75, 255, 165, .9);
+/*FOOTER area*/
+footer {
+    grid-area: footer;
+    text-align: left;
     color: rgb(16, 16, 16);
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 30px;
-    transition: opacity .4s, visibility .4s;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footerLink {
+    letter-spacing: 10px;
+    display: inline;
+    padding-left: 30px;
+}
+
+#footer {
+    background-color: rgb(16, 16, 16);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    /* Footer height */
+}
+
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.text {
+    flex-grow: .1;
+    position: relative;
+    bottom: 8px;
+}
+
+.link1 {
+    flex-grow: .03;
+}
+
+.link2 {
+    flex-grow: .03;
+}
+
+.link3 {
+    flex-grow: .03;
+}
+
+.link4 {
+    flex-grow: .03;
+}
+
+/*end of footer*/
+
+/*General body styling*/
+section,
+aside,
+article {
+    padding: .5rem;
+    word-wrap: break-word;
+}
+
+p {
+    justify-content: space-between;
+}
+
+h1,
+h2 {
+    margin-top: 0%;
+    font-family: 'Recoleta';
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
     font-family: 'AvenirLight';
 }
 
-.portfolio-buttons .img__wrap:hover .img__description {
-    border-radius: 30px;
-    visibility: visible;
-    opacity: 1;
+/*end of styling*/
+
+
+/*Images*/
+img {
+    object-fit: contain;
+    width: 100%;
 }
 
-.portfolio-buttons .img__wrap:hover .img__img {
-    opacity: 0;
-    transition: opacity .4s, visibility .4s;
+.image {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    flex-wrap: wrap;
 }
 
-.section3 h1{
-    font-family: 'Avenir';
-    padding-top: 5%;
+.secondImage img {
+    transform: rotate(15deg);
+    width: 100%;
+    margin-left: 15%;
 }
 
+/*end of images*/
 
-/* Media Queries */
+/*Handles elements at smaller screen*/
 @media (max-width: 760px) {
-    .portfolio-buttons h1 {
-        font-size: 29px;
+
+    #wrapper {
+        display: grid;
+        height: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "section"
+            "article"
+            "aboutMe"
+            "footer"
     }
 
-    .portfolio-buttons span,
-    .portfolio-buttons p {
-        font-size: 15px;
+    .headers {
+        display: flex;
+        align-items: center;
     }
 
-    .portfolio-buttons .img__description {
-        font-size: 17px;
+    .headers > div{
+        padding-left: 3%;
     }
 
-    .portfolio-buttons .project {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+    .buttons {
+        display: none;
     }
 
-    .portfolio-buttons .div1 {
-        grid-area: 1 / 1 / 2 / 2;
+    .playOption {
+        display: none;
     }
 
-    .portfolio-buttons .div2 {
-        grid-area: 2 / 1 / 3 / 2;
+    .item1>img {
+        display: none;
     }
 
-    .portfolio-buttons .div3 {
-        grid-area: 3 / 1 / 4 / 2;
+    .item1 {
+        width: 10px;
+        flex-grow: 0;
+        padding: 5px 0px;
     }
-}
 
-@media screen and (min-width: 1900px) {
-    .portfolio-buttons .img__description {
-        font-size: 30px;
+    .item2 {
+        flex-grow: 1;
+        padding-top: 50px;
+        margin-right: 10%;
+        margin-left: 5%
     }
+
+    article {
+        padding: 20px 40px;
+        margin-top: 0px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .image {
+        margin-bottom: 90px;
+    }
+
+    aside {
+        margin-top: 0%;
+    }
+
+    .secondImage {
+        transform: rotate(90deg);
+        width: 100%;
+    }
+
+    section {
+        grid-area: section;
+        padding-top: 10px;
+        overflow: visible;
+    }
+
+    .secondImage img {
+        transform: rotate(-90deg);
+        height: 90%;
+    }
+
+    .footerLink {
+        display: flex;
+        gap: 40px;
+    }
+
+    footer {
+        grid-area: footer;
+        text-align: left;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidepanel a:hover {
+        color: rgb(75, 249, 255);
+    }
+
+    /*Header at smaller screen*/
+    .navigation {
+        display: none;
+    }
+
+    .one {
+        flex: 2;
+    }
+
+    .two {
+        flex: 2;
+    }
+
+    .three {
+        flex: 2;
+    }
+
+    .four {
+        flex: 2;
+    }
+
+    .five {
+        flex: 2;
+    }
+
+
 }

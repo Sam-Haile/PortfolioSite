@@ -6,47 +6,6 @@ body {
   height: 100%;
 }
 
-/* Styles for button*/
-.buttons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 13%;
-  font-family: 'Avenir';
-}
-
-.buttons>div {
-  border-radius: 5px;
-  /* Set a specific width for each button */
-  width: 100px;
-  /* Set a specific height for each button */
-  height: 50px;
-  /* To center the content inside each button */
-  display: flex;
-  /* Center content vertically */
-  align-items: center;
-}
-
-.buttons>div:last-child {
-  /* Remove the right margin for the last button to avoid extra spacing on the right */
-  margin-right: 0;
-}
-
-.homeButton img {
-  width: auto;
-  height: 65px;
-}
-
-.homeButton {
-  margin-right: 50px;
-  padding-top: 5px;
-}
-
-.projectsButton,
-.blogButton {
-  padding-right: 0%;
-}
-
 /* 3 sections of home page */
 .parent {
   display: grid;
