@@ -3,10 +3,6 @@
     font-family: 'AvenirLight';
 }
 
-.languages_frameworks h1{
-    font-family: 'Avenir';
-}
-
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

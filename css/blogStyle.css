@@ -11,10 +11,6 @@ body {
     background-color: rgb(18, 18, 20);
 }
 
-p {
-    font-family: 'SanfordBook';
-}
-
 div {
     background-color: rgb(33, 32, 37);
 }
@@ -25,11 +21,6 @@ div {
     height: 100%;
 }
 
-.blog-page h1,
-h2 {
-    font-family: 'Rianti';
-}
-
 .item1 {
     flex-grow: 1;
     background-repeat: no-repeat;
@@ -38,10 +29,10 @@ h2 {
     background-color: #1e1d21;
 }
 
-.item1 h1, p
-{
+.item1 h1,
+p {
     text-align: center;
-    padding: 0px 20%;
+    padding: 10% 20% 5% 20%;
 }
 
 .item1 p {
@@ -51,18 +42,19 @@ h2 {
 .item2 {
     flex-grow: 1;
     flex-shrink: 1;
+
 }
 
 .item3 {
     flex-grow: 1;
 }
 
-.buttons{
+.buttons {
     background-color: #1e1d21;
 }
 
-.item2, .item3{
-    padding-left: 13%;
+.item2,
+.item3 {
+    padding-left: 15%;
     padding-top: 25px;
 }
-

@@ -12,6 +12,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 13%;
+  font-family: 'Avenir';
 }
 
 .buttons>div {

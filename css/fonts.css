@@ -22,3 +22,16 @@
     font-weight: 500;
     font-style: normal;
   }
+
+
+  h1{
+    font-family: 'Recoleta';
+  }
+
+  h2, h3, h4{
+    font-family: 'Avenir';
+  }
+
+  p{
+    font-family: 'AvenirLight';
+  }
