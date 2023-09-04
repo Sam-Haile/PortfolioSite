@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: local('Recoleta Medium'), local('Recoleta-Medium'),
+      url('../media/Recoleta/Recoleta-Medium.woff2') format('woff2'),
+      url('../media/Recoleta/Recoleta-Medium.woff') format('woff'),
+      url('../media/Recoleta/Recoleta-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Avenir';
+    src: url('../media/Avenir/AvenirLTStd-Roman.otf') format('opentype'),
+      url('../media/Avenir/AvenirLTStd-Roman.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'AvenirLight';
+    src: url('../media/Avenir/AvenirLight.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
