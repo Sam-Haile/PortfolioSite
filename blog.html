@@ -13,27 +13,30 @@
     <link rel="stylesheet" href="css/blogSliderStyle.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/projects.css">
     <script src="js/blogSlider.js" defer></script>
 </head>
 
 <body>
 
     <div class="blog-page">
-
         <div class="item1">
             <div class="buttons"> <!--Buttons-->
                 <div class="homeButton" style="background-color: #1e1d21;"><a href="index.html"><img
-                            src="media/Icons/Logo.png" alt="Home Button"></a>
+                    src="media/Icons/Logo.png" alt="Home Button"></a>
                 </div>
                 <div class="projectsButton" style="background-color: #1e1d21;"><a href="index.html">Projects</a></div>
                 <div class="blogButton" style="background-color: #1e1d21;"><a href="blog.html">Blog</a></div>
             </div>
+            
+            <div class ="title">BLOG</div>
+            <p style="text-align: center;"> Welcome to my digital canvas, a space where imagination meets interactivity. From the intricacies of
+                game design to the wonders of physical computing and beyond, I chronicle my adventures and discoveries
+                in the ever-evolving world of tech and creativity. Whether you're a fellow designer, a tech aficionado,
+                or simply curious, there's insight and inspiration awaiting you here.
+            </p>
 
-            <p style="font-size: 12px; margin-bottom: 0;">THINGS TO READ</p>
-            <h1 style="font-size: 40px;">Latest Articles
-                <hr>
-            </h1>
+            <p style="font-size: 12px; margin-bottom: -20px;">THINGS TO READ</p>
+            <h1 style="font-size: 40px;">Latest Articles<hr></h1>
 
             <div class="wrapper">
                 <i id="left" class="fa-solid fa-angle-left"></i>
@@ -50,43 +53,64 @@
                 <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
 
-            <p> Welcome to my digital canvas, a space where imagination meets interactivity. From the intricacies of
-                game design to the wonders of physical computing and beyond, I chronicle my adventures and discoveries
-                in the ever-evolving world of tech and creativity. Whether you're a fellow designer, a tech aficionado,
-                or simply curious, there's insight and inspiration awaiting you here.
-            </p>
+
 
 
         </div>
 
-        <div class="item2">
-            <h2>Entries</h2>
-            <!-- #region Project 1/2/3-->
-            <div class="portfolio-buttons">
-                <div class="projects">
-                    <div class="project">
-                        <div class="div1">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Blog/project0/media/image1.jpg" alt="Arduino Project 0">
-                                <a href="Blog/project0/project0.html">
-                                    <p class="img__description"> Arduino Project 0</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="div2">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Blog/project1/media/gif1.gif" alt="Arduino Project 1">
-                                <a href="Blog/project1/project1.html">
-                                    <p class="img__description"> Arduino Project 1</p>
-                                </a>
-                            </div>
-                        </div>
+        <div class="all-entries">
+            <div class="grid-item">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/project0/media/thumbnail.jpg"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/3/23</p>
+                        <h2>Physical Comp and Alt Interfaces: Introduction and Setup</h2>
+                        <p>In this chapter, I set up the Arduino, and reflect on the challenges and insights I encountered along the way.</p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/project0/project0.html" class="button button1">Read More</a>
                     </div>
                 </div>
             </div>
-            <!-- #endregion -->
+            <div class="grid-item">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/project1/media/thumbnail.jpg"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/3/23</p>
+                        <h2>Physical Comp and Alt Interfaces: Get to Know Your Tools</h2>
+                        <p>In chapter 1,I built my first circuit using a combination of switches, a resistor and an LED.
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/project1/project1.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="grid-item">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="media/img1.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 1/23/45 </p>
+                        <h2>Physical Comp and Alt Interfaces: Assignment 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos reiciendis dolorem
+                            ipsa!
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <button class="button button1">Read More</button>
+                    </div>
+                </div>
+            </div>-->
         </div>
-        <div class="item3">
+
+
+
+
+
+
+
+        <div class="item2">
             <h2></h2>
         </div>
 

@@ -15,6 +15,15 @@ div {
     background-color: rgb(33, 32, 37);
 }
 
+.title {
+    text-align: center;
+    font-family: "Recoleta";
+    font-size: 60px;
+    background-color: #1e1d21;
+    padding-top: 150px;
+}
+
+/*Main Blog Sections*/
 .blog-page {
     display: flex;
     flex-direction: column;
@@ -27,6 +36,7 @@ div {
     background-size: cover;
     background-position: center center;
     background-color: #1e1d21;
+    padding-bottom: 100px;
 }
 
 .item1 h1,
@@ -34,7 +44,7 @@ p {
     padding: 0% 20%;
 }
 
-.item1 hr{
+.item1 hr {
     width: 10%;
     height: 4px;
     background-color: white;
@@ -49,220 +59,106 @@ p {
 
 .item2 {
     flex-grow: 1;
-    flex-shrink: 1;
-
-}
-
-.item3 {
-    flex-grow: 1;
 }
 
 .buttons {
     background-color: #1e1d21;
 }
 
-.item2,
-.item3 {
+.item2 {
     padding-left: 15%;
-    padding-top: 25px;
-}
-
-
-
-/*PROJECTS SECTION*/
-.portfolio-buttons * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-.portfolio-buttons img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-.portfolio-buttons h1 {
-    padding-bottom: 8%;
-    padding-top: 15%;
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
-}
-
-.portfolio-buttons span,
-.portfolio-buttons p {
-    font-size: 25px;
-}
-
-.portfolio-buttons a:link,
-.portfolio-buttons a:visited,
-.portfolio-buttons a:hover,
-.portfolio-buttons a:active {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.portfolio-buttons a:hover {
-    color: #9C84B8;
-}
-
-/* Overlays */
-.portfolio-buttons .black_overlay {
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=80);
-}
-
-.portfolio-buttons .white_content {
-    display: none;
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    padding: 16px;
-    border: 16px solid #9C84B8;
-    background-color: rgb(3, 3, 3);
-    z-index: 1002;
-    overflow: auto;
-}
-
-/* Links */
-.portfolio-buttons .links {
-    background-color: rgb(16, 16, 16);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/* Grid */
-.portfolio-buttons .project {
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 75%;
-    grid-gap: 20px;
-}
-
-.portfolio-buttons .div1,
-.portfolio-buttons .div2,
-.portfolio-buttons .div3 {
-    padding: 20px 40px;
-}
-
-.portfolio-buttons .div1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.portfolio-buttons .div2 {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-.portfolio-buttons .div3 {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-/* Image wraps */
-.portfolio-buttons .img__wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.portfolio-buttons .img__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #9C84B8;
-    color: rgb(16, 16, 16);
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 30px;
-    transition: opacity .4s, visibility .4s;
-    font-family: 'AvenirLight';
-}
-
-.portfolio-buttons .img__wrap:hover .img__description {
-    border-radius: 30px;
-    visibility: visible;
-    opacity: 1;
-}
-
-.portfolio-buttons .img__wrap:hover .img__img {
-    opacity: 0;
-    transition: opacity .4s, visibility .4s;
-}
-
-.section3 h1{
-    font-family: 'Avenir';
     padding-top: 5%;
 }
 
 
-/* Media Queries */
-@media (max-width: 760px) {
-    .portfolio-buttons h1 {
-        font-size: 29px;
-    }
 
-    .portfolio-buttons span,
-    .portfolio-buttons p {
-        font-size: 15px;
-    }
-
-    .portfolio-buttons .img__description {
-        font-size: 17px;
-    }
-
-    .portfolio-buttons .project {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .portfolio-buttons .div1 {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    .portfolio-buttons .div2 {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .portfolio-buttons .div3 {
-        grid-area: 3 / 1 / 4 / 2;
-    }
+/*All Entries Section*/
+.blogpost {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
-@media screen and (min-width: 1900px) {
-    .portfolio-buttons .img__description {
-        font-size: 30px;
-    }
+.blogimg {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 300px;
+    height: 200px;
 }
 
-.portfolio-buttons .div1,
-.portfolio-buttons .div2,
-.portfolio-buttons .div3 {
-    width: 100%;      /* takes the full width of the parent grid */
-    height: 40%;    /* set to whatever height you want */
-    padding: 20px 40px;
+.blogimg img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px 0px;
+}
+
+.blogtext {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 300px;
+}
+
+.blogtext h2,
+.blogtext p {
+    margin: 0;
+    padding: 10px 0px;
+    max-width: 300px;
+}
+
+.blogtext h2 {
+    padding: 20px 0px;
 }
 
 
+.blogbutton {
+    grid-area: 3 / 1 / 4 / 2;
+    border: none;
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    width: 250px;
+    padding-top: 20px;
+}
+
+.blogbutton a.button.button1 {
+    display: inline-block;  /* This makes the anchor behave more like a button */
+    text-align: center;     /* Center the text, if needed */
+    font-size: 17px;
+    /* Add other button styles as needed */
+    height: 45px;           /* Example height, adjust as needed */
+    line-height: 45px;    
+}
+
+
+.button1 {
+    background-color: rgb(33, 32, 37);
+    color: white;
+    border: 2px solid #ffffff;
+    width: 50%;
+    height: 25%;
+    border-radius: 30px;
+    border-color: white;
+    border-width: 1px;
+    font-family: 'AvenirLight';
+    font-size: 18px;
+}
+
+.button1:hover {
+    background-color: #9C84B8;
+    color: white;
+}
+
+.all-entries {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.grid-item:nth-child(1),
+.grid-item:nth-child(2),
+.grid-item:nth-child(3) {
+    padding: 30px;
+}
