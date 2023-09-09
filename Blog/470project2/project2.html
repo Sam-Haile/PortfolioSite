@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../css/blogproject.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <h1>Samuel Haile</h1>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../index.html">Home</a></div>
+                <div class="item2"><a href="../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../index.html">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Parallax Occlusion Mapping with AI-Generated Depth Maps Using MIDAS</h1>
+            <small>PUBLISHED ON <i>August 17, 2023 </i> by Samuel Haile </small>
+            <hr style="margin-top: 10px; width: 137%;">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Latest Articles</h2>
+            <hr style="margin-top: 10%;">
+            <p><a href="../470project0/project0.html">Physical Comp and Alt Interfaces: Get to Know Your Tools</a></p>
+            <small>September 3, 2023</small>
+            <hr style="margin-top: 5%;">
+            <p><a href="../470project1/project1.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
+            <small>September 3, 2023</small>
+            <hr style="margin-top: 5%;">
+            <p><a href="../project1/project1.html">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
+            <small>September 3, 2023</small>
+            <hr style="margin-top: 5%;">
+            
+        </div>
+        <div class="content">
+            <img src="media/depthmapfrom2dfoxexample.jpg">
+            <p>Arduino offers endless possibilities for creators, hobbyists, and tech enthusiasts. One such
+                project is the "Spaceship Interface," which can transport you to the realms of 1970s science fiction movies. Let's
+                delve into the process of creating this captivating project.
+                Here's a brief overview:
+            </p>
+
+            <ul>
+                <li>A green LED will remain illuminated</li>
+                <li>Upon pressing a button, the green LED will turn off</li>
+                <li>Two other lights will start blinking when the button is pressed</li>
+            </ul>
+            
+            <h2>The Basics</h2>
+            <p>Every Arduino program revolves around two primary functions: <strong>setup()</strong> and <strong>loop()</strong>.
+                The <strong>setup()</strong> function runs once when the Arduino powers on, configuring the digital pins as inputs or outputs. 
+                The <strong>loop()</strong> function, on the other hand, runs continuously, checking for voltage on the inputs and toggling outputs accordingly.
+            </p>
+
+            <div class="content-wrapper">
+                <div class="text">
+                    <h2>The Code</h2>
+                    <p> Coding is the heart of this project. The program begins by setting up the pins connected to the LEDs as OUTPUTs and
+                        the switch pin as an INPUT. The main loop then continuously checks the voltage level on the digital input using the
+                        digitalRead() function. Depending on the switch's state, the LEDs are controlled to simulate the spaceship's
+                        actions.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="media/midas_samples.png" alt="image of midas_samples">
+                </div>
+            </div>
+
+            <h2>User Experience</h2>
+            <p>When designing an interface, it's vital to consider the user's expectations. Immediate feedback upon pressing a
+                button enhances the user experience. Delays can be introduced using the delay() function, but it's crucial to ensure
+                they don't interfere with the interface's responsiveness.
+            </p>
+
+            <h2>Conclusion</h2>
+            <p>The "Spaceship Interface" project is a testament to the versatility and potential of Arduino. It serves as a
+                foundation for enthusiasts to expand upon, perhaps by adding more LEDs, switches, or even integrating sensors. The
+                key takeaway is to always place yourself in the user's shoes, ensuring that the interface aligns with their
+                expectations.</p>
+
+        </div>
+    </div>
+</body>
+
+</html>

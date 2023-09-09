@@ -3,7 +3,7 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     background-color: rgb(16, 16, 16);
-    color: white;
+    color: whitesmoke;
 }
 
 #page-container {
@@ -35,7 +35,7 @@ button {
 }
 
 small {
-    color: white;
+    color: whitesmoke;
 }
 
 .headers {
@@ -85,7 +85,7 @@ small {
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
-    color: white;
+    color: whitesmoke;
     padding: 10px 15px;
     border: none;
 }

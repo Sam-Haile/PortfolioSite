@@ -32,6 +32,6 @@
     font-family: 'Avenir';
   }
 
-  p, small{
+  p, small, li, a{
     font-family: 'AvenirLight';
   }

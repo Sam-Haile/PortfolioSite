@@ -2,7 +2,7 @@ html,
 body {
     padding: 0;
     height: 100%;
-    color: white;
+    color: whitesmoke;
 }
 
 body {
@@ -47,7 +47,7 @@ p {
 .item1 hr {
     width: 10%;
     height: 4px;
-    background-color: white;
+    background-color: whitesmoke;
     border-width: 0;
     margin-left: 0;
     margin-top: 1%;
@@ -79,12 +79,14 @@ p {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    height: 600px; /* Total height: 200px + 100px (estimated for text) + 50px = 350px */
 }
 
 .blogimg {
     grid-area: 1 / 1 / 2 / 2;
     width: 300px;
     height: 200px;
+    overflow: hidden; /* This ensures that if the image is larger than the set dimensions, it won't spill out */
 }
 
 .blogimg img {
@@ -113,7 +115,7 @@ p {
 .blogbutton {
     grid-area: 3 / 1 / 4 / 2;
     border: none;
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
     transition-duration: 0.4s;
     width: 250px;
@@ -132,12 +134,12 @@ p {
 
 .button1 {
     background-color: rgb(33, 32, 37);
-    color: white;
+    color: whitesmoke;
     border: 2px solid #ffffff;
     width: 50%;
     height: 25%;
     border-radius: 30px;
-    border-color: white;
+    border-color: whitesmoke;
     border-width: 1px;
     font-family: 'AvenirLight';
     font-size: 18px;
@@ -145,20 +147,21 @@ p {
 
 .button1:hover {
     background-color: #9C84B8;
-    color: white;
+    color: whitesmoke;
 }
 
 .all-entries {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap; /* Allow the items to wrap to the next line */
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin: 0 auto; /* Center the container */
 }
 
-.grid-item:nth-child(1),
-.grid-item:nth-child(2),
-.grid-item:nth-child(3) {
+
+.grid-item{
     padding: 30px;
 }
+

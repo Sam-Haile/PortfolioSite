@@ -258,7 +258,7 @@ function createLabelsAndButtons() {
 
     // Default button size
     let buttonStyle = new PIXI.TextStyle({
-        fill: 'white',
+        fill: 'whitesmoke',
         strokeThickness: 15,
         fontSize: 50,
         fontFamily: 'cthulhumbus',
@@ -332,7 +332,7 @@ function createLabelsAndButtons() {
 
     let controlText = new PIXI.Text("Controls");
     let controlTextStyle = new PIXI.TextStyle({
-        fill: 'white',
+        fill: 'whitesmoke',
         strokeThickness: 15,
         fontSize: 80,
         fontFamily: 'cthulhumbus',
@@ -387,7 +387,7 @@ function createLabelsAndButtons() {
 
     let levelLoseText = new PIXI.Text("You Lost!")
     levelLoseText.style = new PIXI.TextStyle({
-        fill: 'white',
+        fill: 'whitesmoke',
         strokeThickness: 15,
         fontSize: 80,
         fontFamily: 'cthulhumbus',

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="../../css/headerStyle.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <title>Tales of Trove</title>
+    <style>
+        li::before {
+            content: "■";
+            display: inline-block;
+            width: 1em;
+            margin-left: 1px;
+            margin-top: 10px;
+            color: #00989d;
+        }
+
+        a:hover {
+            color: r#00989d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-container">
+        <div id="content-wrap">
+
+            <div class="navigation">
+                <div class="one"><a href="../../index.html">Samuel Haile</a></div>
+                <div class="two"><a href="../../index.html">Projects</a></div>
+                <div class="three"><a href="../../media/Haile_Samuel_Resume.pdf">Resume</a></div>
+            </div>
+
+            <div id="wrapper">
+                <header>
+                    <div class="slideshow-container" style="max-width: 45%;">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="media/image1.jpg" alt="Titlescreen">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="media/image2.jpg" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="media/image3.jpg" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="media/image4.jpg" alt="Gameplay Image 1" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="dots" style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+
+                    </div>
+                </header>
+
+                <article>
+                    <section class id="key_features">
+                        <h2>Reflection</h2>
+                        <p>Building this circuit was super fun. I got hands-on experience with breadboards and I'm slowly beginning to understand the
+                            importance of each component in the circuit. Seeing the LED light up was a simple interaction, but it's made me excited to see what else I can make.</p>
+                    </section>
+                </article>
+
+                <section>
+                    <section class id="development">
+                        <div class="articleTwo">
+                            <h3 style="color: #00989d;"></h3>
+                            <div style="display: flex; justify-content: center;">
+                                <img src="media/gif1.gif" alt="Gif of Arduino Board" style="width: 50%">
+                            </div>                        </div>
+                    </section>
+                </section>
+
+                <aside>
+                    <h1 style="font-size: 50px;">Get to Know Your Tools</h1>
+                    <h4>
+                    </h4>
+                    <ul class="redSquares">
+                        <h4>1. The Basics of Electricity </h4>
+                        <li>Electrical energy flows through conductors, like wires, and can be converted into other forms of energy, such as
+                            light or sound. This conversion is done using electrical transducers. These transducers can either convert other
+                            forms of energy into electrical energy (called sensors) or convert electrical energy into other forms (known as
+                            actuators).</li>
+
+                        <h4>2. Building the Circuit</h4>
+                        <li>With the basics in place, I moved on to building my first interactive circuit. The components I used were simple: a
+                            switch, a resistor, and an LED. In this setup, the Arduino served merely as the power source. The idea was
+                            straightforward – when a user presses the button, the LED lights up!
+                        </li>
+
+                        <h4>3. Key Information</h4>
+                        <li><strong>Current:</strong> The amount of electrical charge flowing past a specific point in a circuit.</li>
+                        <li><strong>Voltage:</strong> The difference in energy between one point in a circuit and another.</li>
+                        <li><strong>Resistance:</strong> How much a component resists the flow of electrical energy.</li>
+                    </ul>
+                </aside>
+
+            </div>
+
+            <footer id="footer">
+                <div class="footerLink">
+                    <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                    <a href="../../media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                    <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

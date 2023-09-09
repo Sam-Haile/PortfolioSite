@@ -13,7 +13,7 @@ body {
   grid-template-rows: 2fr, 1fr, 3fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  color: white;
+  color: whitesmoke;
 }
 
 .section1 {
@@ -55,7 +55,7 @@ a {
 /* Remove underline from link when it's hovered over */
 a:hover {
   text-decoration: none;
-  color: white;
+  color: whitesmoke;
 }
 
 /* Remove underline from link when it's active (being pressed) */

@@ -1,0 +1,175 @@
+/*General*/
+body {
+    background-color: #1e1d21;
+}
+
+
+hr {
+    padding: .2px;
+    margin: 2px;
+    border: none;
+    background-color: #9C84B8;
+}
+
+li {
+    padding-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/*Main Blog Sections*/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    /* This centers the container on the page */
+    max-width: 1200px;
+    /* This ensures that the width doesn't exceed 1200px, even on wider screens */
+    width: 85%;
+    color: whitesmoke;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 40px;
+}
+
+.title {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.title h1 {
+    width: 90%;
+    font-size: 30px;
+}
+
+.sidebar {
+    grid-area: 2 / 2 / 4 / 3;
+}
+
+.content {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 135%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.content h2 {
+    width: 70%;
+    margin-top: 60px;
+}
+
+/*Sidebar*/
+.contact {
+    display: flex;
+    /* Turn the .contact div into a flex container */
+    justify-content: center;
+    /* Center children horizontally */
+    align-items: center;
+    /* Center children vertically */
+}
+
+.contact a {
+    font-size: 25px;
+    padding: 0px 15px;
+}
+
+.parent {
+    position: relative;
+    /* This ensures the sidebar is positioned relative to this parent */
+}
+
+.sidebar {
+    position: relative;
+    padding-top: 10%;
+    margin-left: 45%;
+}
+
+.sidebar::before {
+    content: "";
+    /* This is required for the pseudo-element to show */
+    position: absolute;
+    /* This allows us to position the pseudo-element */
+    left: -15px;
+    /* This positions the pseudo-element 10px to the left of the sidebar */
+    top: 10px;
+    /* Start at the top of the sidebar */
+    bottom: 0;
+    /* End at the bottom of the sidebar */
+    width: .2px;
+    /* The width of your vertical line */
+    height: 100%;
+    background-color: #9c84b8b1;
+    /* The color of the vertical line */
+}
+
+.sidebar h2 {
+    margin-top: 20%;
+}
+
+/* Links in the header*/
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.links>div {
+    text-decoration: none;
+}
+
+/* Remove text decoration from all links */
+.header a {
+    font-size: 12px;
+}
+
+/* Change the color to white when hovering over a link */
+a:hover {
+    color: #9C84B8;
+}
+
+.sidebar p {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.sidebar small {
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.text {
+    /* flex:0 1 auto; */
+    flex-grow: 0;
+}
+
+.text p{
+    margin-right: 10%;
+}
+
+.image {
+    /* flex:0 1 auto; */
+    margin-top: 5%;
+}
+
+.content-wrapper img {
+    max-width: 100%;
+}
+
+.content img{
+    max-width: 100%;
+}
