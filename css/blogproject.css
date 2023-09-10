@@ -157,7 +157,7 @@ a:hover {
     flex-grow: 0;
 }
 
-.text p{
+.left-text p{
     margin-right: 10%;
 }
 
@@ -173,3 +173,8 @@ a:hover {
 .content img{
     max-width: 100%;
 }
+
+.right-text{
+    margin-left: 10%;
+}
+
