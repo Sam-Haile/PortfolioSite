@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../css/blogproject.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <h1>Samuel Haile</h1>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../index.html">Home</a></div>
+                <div class="item2"><a href="../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../index.html">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Physical Comp and Alt Interfaces: Love-O-Meter Project</h1>
+            <small>PUBLISHED ON <i>September 10, 2023 </i> by Samuel Haile </small>
+            <hr style="margin-top: 10px; width: 137%;">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Latest Articles</h2>
+            <hr style="margin-top: 10%;">
+            <p><a href="../470project0/project0.html">Physical Comp and Alt Interfaces: Get to Know Your Tools</a></p>
+            <small>September 3, 2023</small>
+            <hr style="margin-top: 5%;">
+            <p><a href="../470project1/project1.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
+            <small>September 3, 2023</small>
+            <hr style="margin-top: 5%;">
+            <p><a href="../project1/project1.html">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr style="margin-top: 5%;">
+        </div>
+        <div class="content">
+            <img src="media/thumbnail.jpeg">
+            <p>The "Love-o-Meter" project is a fascinating exploration into the world of temperature sensing and LED
+                indicators.
+                Let's delve into the details and results of this project to understand its significance and potential
+                applications.
+            </p>
+
+            <h2>Project Overview</h2>
+            <p>The primary objective of the "Love-o-Meter" project is to gauge the ambient temperature and utilize it to
+                activate
+                LEDs, thereby indicating the warmth level. The project employs the TMP36 temperature sensor, which is
+                advantageous
+                due to its direct proportional voltage output corresponding to the temperature in Celsius.
+            </p>
+
+            <h2>Circuit Construction</h2>
+            <p> The project requires the following setup:</p>
+
+
+            <ul>
+                <li>Power and ground connections on the breadboard</li>
+                <li>LEDs connected to pins 2 through 4, with their cathodes (short legs) attached to the ground via a 220-ohm resistor</li>
+                <li>TMP36 sensor placement on the breadboard, ensuring the rounded part faces away from the Arduino. The left pin of the flat side connects to power, the right pin to ground, and the center pin to pin A0 on the Arduino, which serves as the analog input pin 0</li>
+            </ul>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <h2>User Interface</h2>
+                    <p>To make the project interactive, a paper cutout in the shape of a hand or lips can be used. The LEDs can be labeled
+                        to signify different warmth levels. For instance:
+                    </p>
+
+                    <ul>
+                        <li>One LED indicates a "cold" temperature</li>
+                        <li>Two LEDs suggest a "warm and friendly" ambiance</li>
+                        <li>Three LEDs denote a "too hot to handle" scenario</li>
+                    </ul>
+
+                    <h2>Code Insights</h2>
+                    <p>The code initializes the serial port and sets the digital pin directions. It reads the temperature sensor's output
+                        and sends the values to the computer. The analogRead() function captures the voltage reading on the pin, which
+                        ranges between 0 and 1023. This value represents the voltage on the pin. The Serial.print() function is employed to
+                        send information from the Arduino to a connected computer.
+                    </p>
+
+                    <h2>Conclusion</h2>
+                    <p>The "Love-o-Meter" project is not just a fun experiment but also an insightful exploration into the world of
+                        temperature sensing and LED indicators. It demonstrates the potential of simple sensors and circuits to create
+                        interactive and engaging projects. Whether you're a hobbyist or a professional, such projects offer a lot of 
+                        learning opportunities and avenues for innovation.
+                    </p>
+
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt="image of midas_samples">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
