@@ -29,8 +29,8 @@
             <hr>
         </div>
         <div class="title">
-            <h1>Physical Comp and Alt Interfaces: Spaceship Interface Project</h1>
-            <small>PUBLISHED ON <i>September 8, 2023 </i> by Samuel Haile </small>
+            <h1>Creating a Color Mixing Lamp with Photoresistors</h1>
+            <small>PUBLISHED ON <i>September 13, 2023 </i> by Samuel Haile </small>
             <hr class="vertical-line" style="margin-top: 10px; ">
         </div>
         <div class="sidebar">
@@ -45,7 +45,7 @@
             <p><a href="../470project0/project0.html">Physical Comp and Alt Interfaces: Get to Know Your Tools</a></p>
             <small>September 3, 2023</small>
             <hr style="margin-top: 5%;">
-            <p><a href="..//470project0/project0.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
+            <p><a href="../470project1/project1.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
             <small>September 3, 2023</small>
             <hr style="margin-top: 5%;">
             <p><a href="../project1/project1.html">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
@@ -82,64 +82,58 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                 </div>
 </div>
-            <p>Arduino offers endless possibilities for creators, hobbyists, and tech enthusiasts. One such
-                project is the "Spaceship Interface," which can transport you to the realms of 1970s science fiction
-                movies. Let's
-                delve into the process of creating this captivating project.
-                Here's a brief overview:
+            <p>Have you ever wanted to create a lamp that changes colors based on the light it detects? With a few simple components
+                and a bit of coding, you can create a fascinating color mixing lamp using photoresistors!
             </p>
+
+            <h2>Project Overview</h2>
+            <p>The Color Mixing Lamp project is designed to change colors based on external lighting conditions. At its core, the
+                project uses three photoresistors, each paired with a colored gel (red, green, and blue). These photoresistors
+                change their resistance based on the amount of light they receive. The colored gels ensure that each photoresistor
+                primarily detects light of a specific color, allowing the system to gauge the relative color levels in the ambient
+                light.
+            </p>
+
+            <h2>Technical Insights:</h2>
+            <p> The project requires the following setup:</p>
 
             <ul>
-                <li>A green LED will remain illuminated</li>
-                <li>Upon pressing a button, the green LED will turn off</li>
-                <li>Two other lights will start blinking when the button is pressed</li>
+                <li><strong>Voltage Division:</strong> The photoresistors are paired with 10-kilohm resistors to form a voltage divider.
+                    The voltage at the junction between the photoresistor and the resistor changes based on the resistance of the
+                    photoresistor, which in turn is influenced by the light it receives.</li>
+                <li><strong>Pulse Width Modulation (PWM):</strong> To achieve the fading effect of LEDs, the project employs PWM. This
+                    technique involves rapidly turning the output pin high and low, creating an illusion of varying voltage levels. The
+                    Arduino Uno, which is central to this project, has six pins dedicated to PWM.
+                </li>
+                <li><strong>LED Color Control:</strong> The project uses an RGB LED with separate red, green, and blue elements. By controlling the intensity of each color, a wide range of colors can be produced.</li>
             </ul>
-
-            <h2>The Basics</h2>
-            <p>Every Arduino program revolves around two primary functions: <strong>setup()</strong> and
-                <strong>loop()</strong>.
-                The <strong>setup()</strong> function runs once when the Arduino powers on, configuring the digital pins
-                as inputs or outputs.
-                The <strong>loop()</strong> function, on the other hand, runs continuously, checking for voltage on the
-                inputs and toggling outputs accordingly.
-            </p>
-
-
-
-            <h2>The Code</h2>
-            <p> Coding is the heart of this project. The program begins by setting up the pins connected to the LEDs as
-                OUTPUTs and
-                the switch pin as an INPUT. The main loop then continuously checks the voltage level on the digital
-                input using the
-                digitalRead() function. Depending on the switch's state, the LEDs are controlled to simulate the
-                spaceship's
-                actions. Below is the code used for the project:
-            </p>
-
-            <br>
-            <img src="media/image3.png" alt="image of midas_samples">
 
             <div class="content-wrapper">
                 <div class="left-text">
-                    <h2>User Experience</h2>
-                    <p>When designing an interface, it's vital to consider the user's expectations. Immediate feedback
-                        upon pressing a
-                        button enhances the user experience. Delays can be introduced using the delay() function, but
-                        it's crucial to ensure
-                        they don't interfere with the interface's responsiveness. In my version of this project, I included code to simulate a startup sequence when letting go of the button.
+                    <h2>Reflections and Observations:</h2>
+
+                    <ul>
+                        <li>The LED's fading is not linear. At about half brightness, the LED appears to stop getting much brighter. This non-linearity is due to the human eye's perception of brightness.</li>
+                        <li>The project offers insights into how sensors can be used to interact with the environment. For instance, this setup could potentially be used to indicate outdoor weather conditions while one is indoors.</li>
+                        <li>The project also touches upon the importance of calibration. The photoresistor's output might not span the entire 0 to 1023 range, and understanding this can be crucial for more advanced applications.</li>
+                    </ul>
+
+                    <h2>Code Insights</h2>
+                    <p>The code initializes the serial port and sets the digital pin directions. It reads the temperature sensor's output
+                        and sends the values to the computer. The analogRead() function captures the voltage reading on the pin, which
+                        ranges between 0 and 1023. This value represents the voltage on the pin. The Serial.print() function is employed to
+                        send information from the Arduino to a connected computer.
                     </p>
 
                     <h2>Conclusion</h2>
-                    <p>The "Spaceship Interface" project is a testament to the versatility and potential of Arduino. It
-                        serves as a
-                        foundation for enthusiasts to expand upon, perhaps by adding more LEDs, switches, or even
-                        integrating sensors. The
-                        key takeaway is to always place yourself in the user's shoes, ensuring that the interface aligns
-                        with their
-                        expectations.</p>
+                    <p>The Color Mixing Lamp project isn't just about
+                        creating a visually appealing lamp, but also about understanding the underlying principles of light, color, and
+                        electronics. Whether you're a seasoned Arduino enthusiast or a curious beginner, this project offers a blend of
+                        learning and fun.
+                    </p>
+
                 </div>
                 <div class="image">
-                    <img src="media/gif1.gif" alt="image of midas_samples">
                 </div>
             </div>
 

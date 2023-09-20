@@ -29,8 +29,8 @@
             <hr>
         </div>
         <div class="title">
-            <h1>Physical Comp and Alt Interfaces: Spaceship Interface Project</h1>
-            <small>PUBLISHED ON <i>September 8, 2023 </i> by Samuel Haile </small>
+            <h1>Creating a Color Mixing Lamp with Photoresistors</h1>
+            <small>PUBLISHED ON <i>September 13, 2023 </i> by Samuel Haile </small>
             <hr class="vertical-line" style="margin-top: 10px; ">
         </div>
         <div class="sidebar">
@@ -45,7 +45,7 @@
             <p><a href="../470project0/project0.html">Physical Comp and Alt Interfaces: Get to Know Your Tools</a></p>
             <small>September 3, 2023</small>
             <hr style="margin-top: 5%;">
-            <p><a href="..//470project0/project0.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
+            <p><a href="../470project1/project1.html">Physical Comp and Alt Interfaces: Introduction and Setup</a></p>
             <small>September 3, 2023</small>
             <hr style="margin-top: 5%;">
             <p><a href="../project1/project1.html">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
@@ -82,68 +82,49 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                 </div>
 </div>
-            <p>Arduino offers endless possibilities for creators, hobbyists, and tech enthusiasts. One such
-                project is the "Spaceship Interface," which can transport you to the realms of 1970s science fiction
-                movies. Let's
-                delve into the process of creating this captivating project.
-                Here's a brief overview:
+            <p>In the realm of DIY electronics and robotics, the Arduino platform stands out for its ease of use and versatility.
+                One of the fascinating projects I recently came across delves into the integration of servo motors with Arduino,
+                showcasing the platform's capabilities.
             </p>
-
-            <ul>
-                <li>A green LED will remain illuminated</li>
-                <li>Upon pressing a button, the green LED will turn off</li>
-                <li>Two other lights will start blinking when the button is pressed</li>
-            </ul>
-
-            <h2>The Basics</h2>
-            <p>Every Arduino program revolves around two primary functions: <strong>setup()</strong> and
-                <strong>loop()</strong>.
-                The <strong>setup()</strong> function runs once when the Arduino powers on, configuring the digital pins
-                as inputs or outputs.
-                The <strong>loop()</strong> function, on the other hand, runs continuously, checking for voltage on the
-                inputs and toggling outputs accordingly.
-            </p>
-
-
 
             <h2>The Code</h2>
-            <p> Coding is the heart of this project. The program begins by setting up the pins connected to the LEDs as
-                OUTPUTs and
-                the switch pin as an INPUT. The main loop then continuously checks the voltage level on the digital
-                input using the
-                digitalRead() function. Depending on the switch's state, the LEDs are controlled to simulate the
-                spaceship's
-                actions. Below is the code used for the project:
+            <p>The project provides a simple yet effective Arduino code that uses the built-in Servo library. This library is
+                instrumental in controlling servo motors, which are commonly used in robotics for precise movement. The code reads
+                values from a potentiometer connected to the Arduino and maps these values to angles that the servo motor can
+                understand. This mapping is crucial because the potentiometer gives values in a range of 0 to 1023, while the servo
+                motor operates in an angle range of 0 to 179 degrees. The code then commands the servo to move to the specified
+                angle.
             </p>
 
-            <br>
-            <img src="media/image3.png" alt="image of midas_samples">
 
-            <div class="content-wrapper">
-                <div class="left-text">
-                    <h2>User Experience</h2>
-                    <p>When designing an interface, it's vital to consider the user's expectations. Immediate feedback
-                        upon pressing a
-                        button enhances the user experience. Delays can be introduced using the delay() function, but
-                        it's crucial to ensure
-                        they don't interfere with the interface's responsiveness. In my version of this project, I included code to simulate a startup sequence when letting go of the button.
-                    </p>
-
-                    <h2>Conclusion</h2>
-                    <p>The "Spaceship Interface" project is a testament to the versatility and potential of Arduino. It
-                        serves as a
-                        foundation for enthusiasts to expand upon, perhaps by adding more LEDs, switches, or even
-                        integrating sensors. The
-                        key takeaway is to always place yourself in the user's shoes, ensuring that the interface aligns
-                        with their
-                        expectations.</p>
-                </div>
-                <div class="image">
-                    <img src="media/gif1.gif" alt="image of midas_samples">
-                </div>
-            </div>
+            <h2>Practical Application</h2>
+            <p>Beyond just moving a servo, the project offers a fun application: an indicator system. By attaching an arrow to the
+                servo motor and placing it over a half-circle paper with indications like "Stay Out," "Knock Please," and "Come In,"
+                users can create a dynamic sign that changes based on the potentiometer's position. It's a creative way to let
+                people know if you're available or busy.
+            </p>
 
 
+            <h2>Extending the Idea</h2>
+            <p>The project prompts readers to think about other potential applications. For instance, by using different sensors,
+                one could create indicators for various parameters, such as temperature or light intensity. The concept of mapping
+                values, as used in this project, would be crucial in these extensions. For example, temperature values could be
+                mapped to specific servo angles to indicate different temperature ranges.
+            </p>
+
+
+            <h2>The Power of Libraries</h2>
+            <p>One of the key takeaways from this project is the importance of libraries in the Arduino environment. Libraries, like
+                the Servo library used here, extend the functionality of the Arduino platform. They encapsulate complex
+                functionalities into simple-to-use functions, enabling users to achieve their objectives without getting bogged down
+                in the intricacies of the underlying hardware.
+            </p>
+
+            <h2>Conclusion</h2>
+            <p>Whether you're a
+                seasoned developer or a newbie, there's always something new to learn and create. So, the next time you're thinking
+                of a DIY electronics project, consider integrating a servo motor with Arduino. The possibilities are endless!
+            </p>
 
         </div>
     </div>

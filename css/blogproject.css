@@ -172,6 +172,7 @@ a:hover {
     margin-top: 5%;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .content-wrapper img {
@@ -189,6 +190,10 @@ a:hover {
 .contact-small-page {
     display: none;
     /* Hide the element */
+}
+
+.vertical-line {
+    width: 137%;
 }
 
 /* Media Query for Tablets and Mobile devices */
@@ -255,6 +260,9 @@ a:hover {
     /* Adjust the content wrappers */
     .content-wrapper {
         flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         /* Stack the text and image vertically */
         gap: 20px;
         /* Add some space between the text and image */
@@ -281,13 +289,17 @@ a:hover {
         /* Reduce the font size a bit */
     }
 
+    .image {
+        width: 40%;
+        padding-bottom: 25px;
+    }
+
     .title h1 {
         font-size: 24px;
         /* Reduce the font size */
     }
 
-    .image {
-        display: flex;
-        justify-content: center;
+    .vertical-line {
+        width: 100%;
     }
 }

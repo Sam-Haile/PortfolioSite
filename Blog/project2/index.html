@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="../../../css/blogproject.css">
-    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/blogproject.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/slideShow.css">
     <title>Document</title>
 
 </head>
@@ -19,16 +20,16 @@
             <a href="../../../index.html"><h1>Samuel Haile</h1></a>
             <hr><hr style="margin-bottom: 5px;">
             <div class="links">
-                <div class="item1"><a href="../../../index.html">Home</a></div>
-                <div class="item2"><a href="../../../blog.html">Blog</a></div>
-                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+                <div class="item1"><a href="../../index.html">Home</a></div>
+                <div class="item2"><a href="../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../index.html#portfolio">Projects</a></div>
             </div>
             <hr style="margin-top: 5px;"><hr>
         </div>
         <div class="title">
             <h1>Crafting a Turn-Based RPG Battle System</h1>
             <small >PUBLISHED ON <i>August 28, 2023 </i> by Samuel Haile </small>
-            <hr style="margin-top: 10px; width: 137%;">
+            <hr class="vertical-line" style="margin-top: 10px; ">
         </div>
         <div class="sidebar">
             <div class="contact">
@@ -59,7 +60,27 @@
             <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
         </div>
         <div class="content">
-            <img src="media/image3.png"> 
+
+<div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <img src="media/thumbnail.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 2</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+</div>
             <p>The concept was simple yet ambitious: to create a turn-based RPG with strategic
                 depth and immersive narrative. The heart of any RPG, of course, is its battle system. This was where I decided to
                 start, diving deep into the mechanics that would drive player engagement and challenge.
@@ -124,6 +145,8 @@
 
         </div>
     </div>
+    <script src="../../../js/main.js"></script>
+
 </body>
 
 </html>
