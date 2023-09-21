@@ -169,7 +169,7 @@ a:hover {
 
 .image {
     /* flex:0 1 auto; */
-    margin-top: 5%;
+    margin-top: auto;
     display: flex;
     justify-content: center;
     height: 100%;
