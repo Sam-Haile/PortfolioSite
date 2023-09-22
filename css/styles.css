@@ -33,7 +33,10 @@ body {
 
 .section3 h1{
   padding-left: 15%;
+  font-family: 'Avenir';
+  padding-top: 5%;
 }
+
 .section3 {
   grid-area: 3 / 1 / 4 / 2;
   background-color: rgb(33, 32, 37);

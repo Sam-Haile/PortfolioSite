@@ -18,6 +18,13 @@ body {margin:0}
   font-family: "AvenirLight";
 }
 
+iframe {
+  width: 100%;
+  height: 75vh;
+  display: block;
+  /* This can help remove any default space below the iframe */
+}
+
 .dots{
   padding-top: 3%;
 }

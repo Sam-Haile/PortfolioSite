@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Applies to all pages-->
     <link rel="stylesheet" href="css/fonts.css"> <!-- Applies to all pages-->
     <link rel="stylesheet" href="css/homepageStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/resetGifs.js"></script>
     <title>Document</title>
 </head>
 
@@ -110,8 +112,7 @@
                 <div class="grid-container">
                     <div class="grid-item"><img src="media/Icons/C++.png" alt="Icon of C++">C++</div>
                     <div class="grid-item"><img src="media/Icons/CSharp.png" alt="Icon of C#">C#</div>
-                    <div class="grid-item"><img src="media/Icons/JavaScript.png" alt="Icon of JavaScript">JavaScript
-                    </div>
+                    <div class="grid-item"><img src="media/Icons/JavaScript.png" alt="Icon of JavaScript">JavaScript</div>
                     <div class="grid-item"><img src="media/Icons/Python.png" alt="Icon of Python">Python </div>
                     <div class="grid-item"><img src="media/Icons/HTML.png" alt="Icon of HTML">HTML</div>
                     <div class="grid-item"><img src="media/Icons/CSS.png" alt="Icon of CSS">CSS</div>
@@ -130,84 +131,61 @@
         <div class="section3"> <!-- Projects -->
             <div class="projects">
                 <h1 id="portfolio">Projects</h1>
-
                 <!-- #region Project 1/2/3-->
                 <div class="portfolio-buttons">
-                    <div class="projects">
                         <div class="project">
-                            <div class="div1">
-                                <div class="img__wrap">
-                                    <img class="img__img" src="Portfolio/project9/media/Game9/TitleScreenGif.gif"
-                                        alt="Rhythm Riot Cover Art">
+                            <div class="project1">
+                                <div class="img__container" data-gif="Portfolio/project9/media/Game9/gameplay.gif">
                                     <a href="Portfolio/project9/proj9.html">
-                                        <p class="img__description"><span
-                                                style="font-family: 'Avenir'; font-size: 14px;">
-                                                Game</span>Rhythm Riot</p>
+                                    <img class="img__img" src="Portfolio/project9/media/Game9/TitleScreenGif.gif" alt="Project Cover Art">
+                                    <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                     </a>
                                 </div>
                             </div>
-                            <div class="div2">
-                                <div class="img__wrap">
-                                    <img class="img__img" src="Portfolio/project11/media/Game11/TitleScreenGif.gif"
-                                        alt="2 Weeks to Die Cover Art">
+                            <div class="project2">
+                                <div class="img__container" data-gif="Portfolio/project11/media/Game11/gameplay.gif">
                                     <a href="Portfolio/project11/proj11.html">
-                                        <p class="img__description"><span
-                                                style="font-family: 'Avenir'; font-size: 14px;">Board
-                                                Game</span>2 Weeks to Die</p>
+                                        <img class="img__img" src="Portfolio/project11/media/Game11/TitleScreenGif.gif" alt="Project Cover Art">
+                                        <img class="gameplay__gif" src=""  alt="Gif of gameplay">
                                     </a>
                                 </div>
                             </div>
-                            <div class="div3">
-                                <div class="img__wrap">
-                                    <img class="img__img" src="Portfolio/project10/media/Game10/Spider-Man.gif"
-                                        alt="Spider-Man Mod Cover Art">
+                            <div class="project3">
+                                <div class="img__container" data-gif="Portfolio/project10/media/Game10/gameplay.gif">
                                     <a href="Portfolio/project10/proj10.html">
-                                        <p class="img__description"><span
-                                                style="font-family: 'Avenir'; font-size: 14px;">
-                                                Mod</span>Spider-Man ReShade</p>
+                                        <img class="img__img" src="Portfolio/project10/media/Game10/Spider-Man.gif" alt="Project Cover Art">
+                                        <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
                 <!-- #endregion -->
 
                 <!-- #region Project 4/5/6-->
                 <div class="portfolio-buttons">
                     <div class="project">
-                        <div class="div1">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project2/media/Game2/TitleScreenGif.gif"
-                                    alt="Chromatic Cover Art">
-                                <a href="Portfolio/project2/proj2.html">
-                                    <p class="img__description"><span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Game</span>Chromatic
-                                    </p>
+                        <div class="project1">
+                            <div class="img__container" data-gif="Portfolio/project2/media/Game2/gameplay.gif">
+                                <a href="Portfolio/project2/proj2.html" >
+                                <img class="img__img" src="Portfolio/project2/media/Game2/TitleScreenGif.gif" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
-                        <div class="div2">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project3/media/TitleScreenGif.gif"
-                                    alt="Pokedex API Cover Art">
-                                <a href="Portfolio/project3/proj3.html">
-                                    <p class="img__description"><span
-                                            style="font-family: 'Avenir'; font-size: 14px;">Web
-                                            App</span>Pokedex
-                                        API</p>
+                        <div class="project2">
+                            <div class="img__container" data-gif="Portfolio/project3/media/gameplay.gif">
+                                <a href="Portfolio/project3/proj3.html" >
+                                <img class="img__img" src="Portfolio/project3/media/TitleScreenGif.gif" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
-                        <div class="div3">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project1/media/Game1/TitleScreenGif.gif"
-                                    alt="Tales of Trove Cover Art">
+                        <div class="project3">
+                            <div class="img__container" data-gif="Portfolio/project1/media/Game1/gameplay.gif">
                                 <a href="Portfolio/project1/proj1.html">
-                                    <p class="img__description"><span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Game</span>Tales
-                                        of
-                                        Trove</p>
+                                <img class="img__img" src="Portfolio/project1/media/Game1/TitleScreenGif.gif" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
@@ -218,37 +196,27 @@
                 <!-- #region Project 7/8/9-->
                 <div class="portfolio-buttons">
                     <div class="project">
-                        <div class="div1">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project5/media/TitleScreenGif.gif"
-                                    alt="Enter the Onegeon Cover Art">
+                        <div class="project1">
+                            <div class="img__container">
                                 <a href="Portfolio/project5/proj5.html">
-                                    <p class="img__description"><span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Game</span>Enter
-                                        the
-                                        Onegeon</p>
+                                <img class="img__img" src="Portfolio/project5/media/TitleScreenGif.gif" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
-                        <div class="div2">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project4/media/TitleScreenGif.gif"
-                                    alt="Jungle Escape Cover Art">
-                                <a href="Portfolio/project4/proj4.html">
-                                    <p class="img__description"><span
-                                            style="font-family: 'Avenir'; font-size: 14px;">Game</span>Jungle
-                                        Escape</p>
+                        <div class="project2">
+                            <div class="img__container" data-gif="Portfolio/project4/media/gameplay.gif">
+                                <a href="Portfolio/project4/proj4.html" >
+                                <img class="img__img" src="Portfolio/project4/media/TitleScreenGif.gif" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
-                        <div class="div3">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project7/media/TitleScreen.png"
-                                    alt="Kirby Minigame Cover Art">
+                        <div class="project3">
+                            <div class="img__container" data-gif="Portfolio/project7/media/gameplay.gif"> 
                                 <a href="Portfolio/project7/proj7.html">
-                                    <p class="img__description"> <span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Game</span>Kirby
-                                        Minigame</p>
+                                <img class="img__img" src="Portfolio/project7/media/TitleScreen.png" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
@@ -259,26 +227,19 @@
                 <!-- #region Project 10-->
                 <div class="portfolio-buttons">
                     <div class="project">
-                        <div class="div1">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project8/media/TitleScreen.png"
-                                    alt="Guren-02 3D Model Cover Art">
+                        <div class="project1">
+                            <div class="img__container" data-gif="Portfolio/project8/media/gameplay.gif">
                                 <a href="Portfolio/project8/proj8.html">
-                                    <p class="img__description"> <span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Model
-                                        </span>Guren-02 3D Model</p>
+                                <img class="img__img" src="Portfolio/project8/media/TitleScreen.png" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
-                        <div class="div2">
-                            <div class="img__wrap">
-                                <img class="img__img" src="Portfolio/project6/media/TitleScreen.png"
-                                    alt="DK 64 3D Model Cover Art">
+                        <div class="project2">
+                            <div class="img__container" data-gif="Portfolio/project6/media/gameplay.gif">
                                 <a href="Portfolio/project6/proj6.html">
-                                    <p class="img__description"> <span style="font-family: 'Avenir'; font-size: 14px;">
-                                            Model</span>DK 64
-                                        3D
-                                        Model</p>
+                                <img class="img__img" src="Portfolio/project6/media/TitleScreen.png" alt="Project Cover Art">
+                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
                                 </a>
                             </div>
                         </div>
@@ -287,9 +248,9 @@
                 <!-- #endregion -->
 
             </div>
-
         </div>
     </div>
+    
 </body>
 
 </html>

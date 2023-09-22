@@ -1,142 +1,106 @@
-  .flex-container {
-    display: flex;
-    justify-content: flex-start;
-    height: 600px;
-  }
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+  height: 600px;
+}
 
-  /*The three sections of the intro*/
-  .intro {
-    width: 45%;
-    /* Fixed width for each flex item */
-    flex-grow: 0;
-  }
+/*#region First Section of Home Page*/
+.intro {
+  width: 45%;
+  /* Fixed width for each flex item */
+  flex-grow: 0;
+}
 
-  .portrait {
-    /* flex:1 1 auto; */
-    flex-grow: 0;
-    padding: 0;
-    margin: 0;
-  }
+.portrait {
+  flex-grow: 0;
+  padding: 0;
+  margin: 0;
+}
 
-  .contact {
-    /* flex:1 1 auto; */
-    flex-grow: 0;
-    padding-top: 3%;
-    flex-shrink: 1;
-  }
+.contact {
+  flex-grow: 0;
+  padding-top: 3%;
+  flex-shrink: 1;
+}
 
-  .img {
-    display: block;
-    height: 100%;
-    width: auto;
-  }
+.img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
 
-  /* The three text areas in the intro*/
-  .intro_text {
-    display: flex;
-    /* flex-flow: column; */
-    flex-direction: column;
-    padding-left: 30%;
-    padding-top: 5%;
-  }
+/* The three text areas in the intro*/
+.intro_text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30%;
+  padding-top: 5%;
+}
 
-  /* Adjusting margin for <p> inside .intro_text */
-  .intro_text .blurb p {
-    margin-top: 20px;
-  }
+/* Adjusting margin for <p> inside .intro_text */
+.intro_text .blurb p {
+  margin-top: 20px;
+}
 
-  /* Adjusting margin for <h1> inside .intro_text */
-  .intro_text .name h1 {
-    margin-bottom: 1px;
-  }
+/* Adjusting margin for <h1> inside .intro_text */
+.intro_text .name h1 {
+  margin-bottom: 1px;
+}
 
-  .blurb2 h1 {
-    margin-top: 10%;
-    margin-bottom: -2%;
-  }
+.blurb2 h1 {
+  margin-top: 10%;
+  margin-bottom: -2%;
+}
 
-  .name {
-    white-space: nowrap;
-    z-index: 2;
-  }
+.name {
+  white-space: nowrap;
+  z-index: 2;
+}
 
-  .contactLinks {
-    margin-top: 20%;
-  }
+.contactLinks {
+  margin-top: 20%;
+}
 
-  .contactLinks a {
-    /* This will ensure each link occupies its own line */
-    display: block;
-    /* Adjust this value to increase/decrease space between icons */
-    margin-bottom: 0px;
-    /* Adjust this value to change the icon size */
-    font-size: 25px;
-    /* Removes the underline from the links */
-    text-decoration: none;
-    /* Ensures the icons inherit the color of the parent element */
-    color: inherit;
-  }
+.contactLinks a {
+  /* This will ensure each link occupies its own line */
+  display: block;
+  /* Adjust this value to increase/decrease space between icons */
+  margin-bottom: 0px;
+  /* Adjust this value to change the icon size */
+  font-size: 25px;
+  /* Removes the underline from the links */
+  text-decoration: none;
+  /* Ensures the icons inherit the color of the parent element */
+  color: inherit;
+}
 
-  .contactLinks>p {
-    padding-top: 0px;
-    margin-top: 0px;
-    font-size: 12px;
-  }
+.contactLinks>p {
+  padding-top: 0px;
+  margin-top: 0px;
+  font-size: 12px;
+}
 
-  .contactLinks a:hover {
-    /* Example color for hover. Adjust as needed. */
-    color: #9C84B8;
-  }
+.contactLinks a:hover {
+  color: #9C84B8;
+}
 
+.textAnim {
+  align-items: center;
+  color: #e5e5e5;
+  font-size: 1.3rem;
+  /* Further reduced font size */
+  text-transform: uppercase;
+  display: flex;
+  font-family: 'Avenir';
+}
 
-  /* Adjusting the image's opacity on hover */
-  .homeButton:hover img {
-    opacity: 0.7;
-    /* Change this value to get the desired opacity */
-  }
-
-  /* Adding a color overlay using a pseudo element */
-  .homeButton {
-    position: relative;
-    display: inline-block;
-  }
-
-  .homeButton::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-    /* Smooth transition */
-    pointer-events: none;
-    /* Ensures the pseudo element doesn't interfere with link actions */
-  }
-
-  .homeButton:hover::before {
-    opacity: 1;
-    /* Show the color overlay on hover */
-  }
-
-  .textAnim {
-    align-items: center;
-    color: #e5e5e5;
-    font-size: 1.3rem;
-    /* Further reduced font size */
-    text-transform: uppercase;
-    display: flex;
-    font-family: 'Avenir';
-  }
-
-  .animation {
-    height: 30px;
-    /* Adjusted height */
-    overflow: hidden;
+.animation {
+  height: 30px;
+  /* Adjusted height */
+  overflow: hidden;
     margin-left: 1rem;
   }
-
+  
   .animation>div>div {
     padding: 0.2rem 0.7rem;
     /* Adjusted padding */
@@ -157,7 +121,6 @@
     background-color: #9C84B8;
     color: rgb(16, 16, 16);
   }
-
   @keyframes text-animation {
 
     0%,
@@ -182,383 +145,323 @@
     }
   }
 
-  /*LANGUAGES AND FRAMEWORKS SECTION*/
-  .languages_frameworks {
-    padding: 50px 0px;
-    font-family: 'AvenirLight';
+  /*#endregion First Section of Home Page*/
+
+/*#region Header*/
+
+/* Adjusting the home buttons opacity on hover */
+.homeButton:hover img {
+  opacity: 0.7;
+}
+
+/* Adding a color overlay using a pseudo element */
+.homeButton {
+  position: relative;
+  display: inline-block;
+}
+
+.homeButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  /* Smooth transition */
+  pointer-events: none;
+  /* Ensures the pseudo element doesn't interfere with link actions */
+}
+
+.homeButton:hover::before {
+  opacity: 1;
+  /* Show the color overlay on hover */
+}
+/*#endregion Header*/
+
+/*#region Languages and Frameworks */
+
+.languages_frameworks {
+  padding: 50px 0px;
+  font-family: 'AvenirLight';
+}
+
+.languages_frameworks h1 {
+  padding-left: 5%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: auto;
+  /* Adjust this */
+  max-width: 90%;
+  /* For some control over maximum width */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #100f0f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1vw;
+  /* Centers the grid */
+}
+
+.grid-container img {
+  width: 2vw;
+  height: auto;
+  padding-right: 5%;
+}
+
+.grid-item {
+  display: flex;
+  padding: 10%;
+  background-color: rgb(33, 32, 37);
+  color: whitesmoke;
+  text-align: left;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  border-style: none;
+  border-left: solid;
+  border-color: rgb(52, 46, 74);
+  border-width: 2px;
+  align-items: center;
+  /* Vertically center */
+}
+
+.smallImg {
+  display: none;
+}
+
+/*#endregion Languages and Frameworks */
+
+/*#region Projects */
+
+.portfolio-buttons img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Grid */
+.portfolio-buttons .project {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  margin: 0 auto;
+  /* This should center the grid */
+  /* Centers the grid horizontally */
+  justify-content: center;
+  /* Centers the grid items horizontally */
+  align-items: center;
+  /* Centers the grid items vertically */
+}
+
+.portfolio-buttons .project {
+  justify-items: center;
+  /* Centers grid items horizontally */
+  align-items: center;
+  /* Centers grid items vertically */
+  padding: 2vw 0px;
+  width: 75vw;
+}
+
+/* Image wraps */
+.portfolio-buttons .img__container {
+  position: relative;
+  height: 25vh;
+  overflow: hidden;
+}
+
+.nav {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;       
+}
+
+.nav li {  
+ float:left;
+ padding: 40px 80px;
+ border: 1px solid silver;
+ 
+ background-color: #9e2828;
+ background-size:40px;
+ background-position: center;
+ background-repeat: no-repeat;
+}
+
+.gameplay__gif {
+  display: none;
+}
+
+.img__container:hover .img__img {
+  display: none;
+}
+
+.img__container:hover {
+  transform: scale(1.3);
+  /* This will scale the container up by 10% */
+  transition: transform 0.3s ease;
+  /* This will ensure a smooth scaling effect */
+}
+
+.img__container {
+  transition: transform 0.3s ease-out;
+  /* This line will ensure the smooth transition */
+}
+
+.img__container:hover .gameplay__gif {
+  display: block;
+}
+
+
+/*#endregion Projects */
+
+/*#region General Styles */
+  
+/* Styles for button*/
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 13%;
+  font-family: 'Avenir';
+}
+  
+.buttons>div {
+  border-radius: 5px;
+  /* Set a specific width for each button */
+  width: 100px;
+  /* Set a specific height for each button */
+  height: 50px;
+  /* To center the content inside each button */
+  display: flex;
+  /* Center content vertically */
+  align-items: center;
+}
+  
+.buttons>div:last-child {
+  /* Remove the right margin for the last button to avoid extra spacing on the right */
+  margin-right: 0;
+}
+  
+.homeButton img {
+  width: auto;
+  height: 65px;
+}
+  
+.homeButton {
+  margin-right: 50px;
+  padding-top: 5px;
+}
+  
+.projectsButton,
+.blogButton {
+  padding-right: 0%;
+}
+  
+/*#endregion General Styles */
+
+/*#region Smaller Screen Queries */
+
+@media (max-width: 768px) {
+
+  /* Flex Layout Adjustments */
+  .flex-container {
+    flex-direction: column;
+    /* stack flex items vertically */
+    height: auto;
+    /* remove fixed height */
   }
 
-  .languages_frameworks h1{
-    padding-left: 5%;
+  .portrait {
+    order: -1;
+  }
+
+  /* Hide the default image */
+  .default-img,
+  .intro,
+  .contact {
+    display: none;
+  }
+
+  .contactLinks {
+    margin-top: 0;
+  }
+
+  .contactLinks a {
+    font-size: 6vw;
+    margin-left: 15%;
+    padding-bottom: 10px;
+  }
+
+  /* Show the image for smaller screens */
+  .small-screen-img {
+    max-width: 70%;
+    float: right;
+  }
+
+  .smallImg {
+    display: block;
+  }
+
+  .name,
+  .blurb2 {
+    margin-left: 5%;
+  }
+
+  .blurb2 {
+    margin-top: 40%;
+  }
+
+  .portrait,
+  .contact {
+    width: 100%;
+  }
+
+  /* Grid Layout Adjustments */
+  .section2 h1 {
+    padding: 5%;
+    margin: 0;
   }
 
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    width: auto; /* Adjust this */
-    max-width: 90%; /* For some control over maximum width */
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #100f0f;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto; /* Centers the grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Three items per row */
+    gap: 1vw;
+    font-size: 2.5vw;
   }
 
-  .grid-container img {
-    width: 20px;
-    height: auto;
-    padding-right: 5%;
+  .grid-container img{
+    width: 4.5vw;
   }
 
+  /* Padding and Margin Adjustments */
   .grid-item {
-    display: flex;
-    padding: 10%;
-    background-color: rgb(33, 32, 37);
-    color: whitesmoke;
-    text-align: left;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    border-style: none;
-    border-left: solid;
-    border-color: rgb(52, 46, 74);
-    border-width: 2px;
-    align-items: center;
-    /* Vertically center */
+    padding: 5%;
   }
 
-  .smallImg {
-    display: none;
-  }
-
-  /*PROJECTS SECTION*/
-  .portfolio-buttons * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  .portfolio-buttons img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-  }
-
-  .portfolio-buttons h1 {
-    padding-bottom: 8%;
-    padding-top: 15%;
-    text-align: center;
-    font-size: 60px;
-    text-transform: uppercase;
-  }
-
-  .portfolio-buttons span,
-  .portfolio-buttons p {
-    font-size: 25px;
-  }
-
-  .portfolio-buttons a:link,
-  .portfolio-buttons a:visited,
-  .portfolio-buttons a:hover,
-  .portfolio-buttons a:active {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-  }
-
-  .portfolio-buttons a:hover {
-    color: #9C84B8;
-  }
-
-  /* Overlays */
-  .portfolio-buttons .black_overlay {
-    display: none;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 1001;
-    -moz-opacity: 0.8;
-    opacity: .80;
-    filter: alpha(opacity=80);
-  }
-
-  .portfolio-buttons .whitesmoke_content {
-    display: none;
-    position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    padding: 16px;
-    border: 16px solid #9C84B8;
-    background-color: rgb(3, 3, 3);
-    z-index: 1002;
-    overflow: auto;
-  }
-
-  /* Links */
-  .portfolio-buttons .links {
-    background-color: rgb(16, 16, 16);
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  /* Grid */
-  .portfolio-buttons .project {
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 75%;
-    margin: 0 auto;
-    /* Centers the grid horizontally */
-    justify-content: center;
-    /* Centers the grid items horizontally */
-    align-items: center;
-    /* Centers the grid items vertically */
-  }
-
-  .portfolio-buttons .div1,
-  .portfolio-buttons .div2,
-  .portfolio-buttons .div3 {
-    padding: 20px 40px;
-  }
-
-  .portfolio-buttons .div1 {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .portfolio-buttons .div2 {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-
-  .portfolio-buttons .div3 {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-
-  /* Image wraps */
-  .portfolio-buttons .img__wrap {
-    position: relative;
-  }
-
-  .portfolio-buttons .img__description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 25px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #9C84B8;
-    color: rgb(16, 16, 16);
-    visibility: hidden;
-    opacity: 0;
-    border-radius: 30px;
-    transition: opacity .4s, visibility .4s;
-    font-family: 'AvenirLight';
-    height: 95%;
-  }
-
-  .portfolio-buttons .img__wrap:hover .img__description {
-    border-radius: 30px;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .portfolio-buttons .img__wrap:hover .img__img {
-    opacity: 0;
-    transition: opacity .4s, visibility .4s;
-  }
-
-  .section3 h1 {
-    font-family: 'Avenir';
-    padding-top: 5%;
-  }
-
-
-  /* Media Queries */
-  @media (max-width: 760px) {
-    .portfolio-buttons h1 {
-      font-size: 29px;
-    }
-
-    .portfolio-buttons span,
-    .portfolio-buttons p {
-      font-size: 15px;
-    }
-
-    .portfolio-buttons .img__description {
-      font-size: 17px;
-    }
-
-    .portfolio-buttons .project {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
-
-    .portfolio-buttons .div1 {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-
-    .portfolio-buttons .div2 {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-
-    .portfolio-buttons .div3 {
-      grid-area: 3 / 1 / 4 / 2;
-    }
-  }
-
-  @media screen and (min-width: 1900px) {
-    .portfolio-buttons .img__description {
-      font-size: 30px;
-    }
-  }
-
-
-  /*HOME BUTTONS SECTION*/
-  /* Styles for button*/
   .buttons {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 13%;
-    font-family: 'Avenir';
-  }
-
-  .buttons>div {
-    border-radius: 5px;
-    /* Set a specific width for each button */
-    width: 100px;
-    /* Set a specific height for each button */
-    height: 50px;
-    /* To center the content inside each button */
-    display: flex;
-    /* Center content vertically */
-    align-items: center;
-  }
-
-  .buttons>div:last-child {
-    /* Remove the right margin for the last button to avoid extra spacing on the right */
-    margin-right: 0;
-  }
-
-  .homeButton img {
-    width: auto;
-    height: 65px;
+    padding-left: 5%;
   }
 
   .homeButton {
-    margin-right: 50px;
-    padding-top: 5px;
+    margin-right: 20px;
   }
 
-  .projectsButton,
-  .blogButton {
-    padding-right: 0%;
+  .portfolio-buttons .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 35px;
+    /* Adjust this value for the desired spacing */
   }
+}
 
-
-  @media (max-width: 768px) {
-
-    /* Flex Layout Adjustments */
-    .flex-container {
-      flex-direction: column;
-      /* stack flex items vertically */
-      height: auto;
-      /* remove fixed height */
-    }
-
-    .portrait {
-      order: -1;
-    }
-
-    /* Hide the default image */
-    .default-img,
-    .intro,
-    .contact {
-      display: none;
-    }
-
-    .contactLinks{
-      margin-top: 0;
-    }
-    .contactLinks a {
-      font-size: 6vw;
-      margin-left:  15%;
-      padding-bottom: 10px;
-    }
-
-    /* Show the image for smaller screens */
-    .small-screen-img {
-      max-width: 70%;
-      float: right;
-    }
-
-    .smallImg {
-      display: block;
-    }
-
-    .name,
-    .blurb2 {
-      margin-left: 5%;
-    }
-
-    .blurb2{
-      margin-top: 40%;
-    }
-    
-    .portrait,
-    .contact {
-      width: 100%;
-    }
-    
-    /* Grid Layout Adjustments */
-    .section2 h1{
-      padding: 5%;
-      margin: 0;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Three items per row */
-      gap: 16px;
-  }
-  
-
-    /* Font Size Adjustments */
-    .portfolio-buttons h1 {
-      font-size: 24px;
-    }
-
-    .portfolio-buttons span,
-    .portfolio-buttons p {
-      font-size: 16px;
-    }
-
-    .portfolio-buttons .img__description {
-      font-size: 14px;
-    }
-
-    /* Padding and Margin Adjustments */
-    .grid-item {
-      padding: 5%;
-    }
-
-    .buttons {
-      padding-left: 5%;
-    }
-
-    .homeButton {
-      margin-right: 20px;
-    }
-  }
+/*#endregion Smaller Screen Queries */
