@@ -3,6 +3,11 @@ body {
     padding: 0;
     height: 100%;
     color: whitesmoke;
+    background-color: rgb(33, 32, 37);
+}
+
+.grid-item.hidden {
+    display: none;
 }
 
 body {
@@ -11,16 +16,39 @@ body {
     background-color: rgb(18, 18, 20);
 }
 
-div {
-    background-color: rgb(33, 32, 37);
+.homeButton:hover img {
+    opacity: .7;
 }
 
 .title {
-    text-align: center;
+    text-align: left;
     font-family: "Recoleta";
     font-size: 60px;
     background-color: #1e1d21;
-    padding-top: 150px;
+    margin-left: 13%;
+}
+
+.item1 p{
+    font-size: 90%;
+    margin-top: 0px;
+    margin-bottom: 1vw;
+    margin-left: 13%;
+}
+
+.filter-buttons button{
+    /*margin: 4vw 2vw;*/
+    border: none;
+    font-family: "AvenirLight";
+    background-color: #1e1d21;
+    color: whitesmoke;
+    padding: 0;
+    margin-right: 1%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.filter-buttons button:first-child{
+    margin-left: 13%;
 }
 
 /*Main Blog Sections*/
@@ -30,6 +58,7 @@ div {
     height: 100%;
 }
 
+
 .item1 {
     flex-grow: 1;
     background-repeat: no-repeat;
@@ -37,11 +66,6 @@ div {
     background-position: center center;
     background-color: #1e1d21;
     padding-bottom: 100px;
-}
-
-.item1 h1,
-p {
-    padding: 0% 20%;
 }
 
 .item1 hr {
@@ -53,23 +77,10 @@ p {
     margin-top: 1%;
 }
 
-.item1 p {
-    padding-top: 50px;
-}
-
-.item2 {
-    flex-grow: 1;
-}
 
 .buttons {
     background-color: #1e1d21;
 }
-
-.item2 {
-    padding-left: 15%;
-    padding-top: 5%;
-}
-
 
 
 /*All Entries Section*/
@@ -79,32 +90,36 @@ p {
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    height: 600px; /* Total height: 200px + 100px (estimated for text) + 50px = 350px */
+    height: 600px;
+    /* Total height: 200px + 100px (estimated for text) + 50px = 350px */
 }
 
 .blogimg {
     grid-area: 1 / 1 / 2 / 2;
-    width: 300px;
+    width: 250px;
     height: 200px;
-    overflow: hidden; /* This ensures that if the image is larger than the set dimensions, it won't spill out */
+    overflow: hidden;
+    /* This ensures that if the image is larger than the set dimensions, it won't spill out */
 }
 
 .blogimg img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 30px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .blogtext {
     grid-area: 2 / 1 / 3 / 2;
-    width: 300px;
+    width: 250px;
 }
 
 .blogtext h2,
 .blogtext p {
     margin: 0;
     padding: 10px 0px;
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .blogtext h2 {
@@ -119,16 +134,21 @@ p {
     text-decoration: none;
     transition-duration: 0.4s;
     width: 250px;
-    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .blogbutton a.button.button1 {
-    display: inline-block;  /* This makes the anchor behave more like a button */
-    text-align: center;     /* Center the text, if needed */
+    display: inline-block;
+    /* This makes the anchor behave more like a button */
+    text-align: center;
+    /* Center the text, if needed */
     font-size: 17px;
     /* Add other button styles as needed */
-    height: 45px;           /* Example height, adjust as needed */
-    line-height: 45px;    
+    height: 45px;
+    /* Example height, adjust as needed */
+    line-height: 45px;
 }
 
 
@@ -153,15 +173,23 @@ p {
 .all-entries {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Allow the items to wrap to the next line */
+    flex-wrap: wrap;
+    /* Allow the items to wrap to the next line */
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin: 0 auto; /* Center the container */
+    background-color: #202025;
+    /* Center the container */
 }
 
-
-.grid-item{
-    padding: 30px;
+.all-entries{
+    margin-top: 5vw;
 }
 
+.grid-item {
+    margin: 0px 2vw;
+}
+
+.active-button {
+    font-weight: bold;
+}

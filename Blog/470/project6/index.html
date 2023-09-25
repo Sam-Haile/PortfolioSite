@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+      </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>An Arduino-based Light Theremin Project</h1>
+            <small>PUBLISHED ON <i>September 23, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../470/project6/index.html"><img src="../project6/media/tinkercadthumbnail.png"> An Arduino-based Light Theremin Project</a></p>
+            <small>September 3, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image3.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image4.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>Project 6 explores the fusion of light detection with Arduino in
+                the form of the Light Theremin. This endeavor brilliantly demonstrates the platform's prowess in melding traditional
+                musical nuances with cutting-edge technology.
+            </p>
+            <br>
+            
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <h2>Analyzing the Light Theremin Project</h2>
+            <p>The Light Theremin project explores the world of sound and light interaction. Using simple
+                components like a photoresistor and a piezo element, this project emulates the mysterious sounds of a
+                traditional
+                theremin, an instrument that has been a staple in many eerie movie soundtracks.
+            </p>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <h2>What is a Theremin?</h2>
+
+                    <p>A theremin is a unique musical instrument that produces sound based on the proximity and movement
+                        of a performer's
+                        hands around two antennas. One antenna controls the frequency of the sound, while the other
+                        manages the volume. The
+                        traditional theremin detects the capacitive change on these antennas, which then gets translated
+                        into sound through
+                        analog circuitry.
+                    </p>
+
+                </div>
+                <div class="image">
+                    <img src="media/image2.png" style="max-width: 10vw;">
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+                <div class="left-text">
+                    <h2>The Light Theremin Project</h2>
+                    <p>In this project, the traditional method of capacitive detection is replaced with light detection using a
+                        photoresistor. By moving adding a light source over the photoresistor, the amount of light reaching the sensor changes. This
+                        change in light intensity is then translated into different sound frequencies, producing the theremin-like sound.
+                    </p><br>
+                    <h2>Key Components and Setup</h2>
+                    <ul>
+                        <li><strong>Photoresistor:</strong>This component detects the amount of light. The change in light intensity on the photoresistor results
+                            in a change in voltage on an analog pin, determining the sound frequency.</li>
+                        <li><strong>Piezo Element:</strong>A small element that vibrates when electrified. As it moves, it displaces air, creating sound waves.</li>
+                        <li><strong>Calibration:</strong>When the Arduino is powered on, there's a 5-second window for calibration. During this
+                            time, shining a light on the photoresistor helps in setting the range of light intensities the sensor will
+                            detect.</li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+
+            <h2>How Does it Work?</h2>
+            <p>The Arduino reads the value from the photoresistor and maps this value to a specific frequency. This frequency is
+                then played using the tone() function, producing the desired sound. The sound's duration and frequency can be
+                adjusted based on the readings from the photoresistor.
+            </p><br>
+
+            <h2>Conclusion</h2>
+            <p>While I wasn't able to create anything that could be called "music", I'm still amazed at how Arduino can bridge the gap between traditional
+                instruments and modern technology. Using just a photoresistor and some basic coding, we can recreate the
+                sounds of a theremin, showcasing the incredible potential of blending old-world charm with contemporary innovation.
+            </p>
+
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

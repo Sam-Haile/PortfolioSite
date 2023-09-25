@@ -304,8 +304,10 @@
   display: none;
 }
 
+.img__container:hover .img__img { opacity: 0; /* Use the same delay for visibility but add the transition duration (1s in this case) to ensure it's only applied after the opacity transition completes */ transition: opacity 1s linear, visibility 0s linear 1s; visibility: hidden; } .img__img { opacity: 1; visibility: visible; /* Add a transition for opacity with a delay of 1 second (or however long you prefer) */ transition: opacity 1s linear; }
+
 .img__container:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
   /* This will scale the container up by 10% */
   transition: transform 0.3s ease;
   /* This will ensure a smooth scaling effect */

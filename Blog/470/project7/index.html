@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+      </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Building a Musical Keyboard with Arduino</h1>
+            <small>PUBLISHED ON <i>September 24, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../470/project6/index.html"><img src="../project6/media/tinkercadthumbnail.png"> An Arduino-based Light Theremin Project</a></p>
+            <small>September 3, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="media/image2.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="media/image3.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+            <p>The world of DIY electronics offers a plethora of opportunities for enthusiasts to create, innovate, and learn. One
+                such project is the construction of a musical keyboard using simple components like resistors and
+                buttons. This project not only introduces the concept of a resistor ladder but also showcases how to utilize analog
+                inputs effectively.
+            </p>
+            <br>
+            
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <h2>How It Works</h2>
+            <ul>
+                <li>
+                    <strong>Resistor Ladder: </strong>Instead of directly connecting switches to digital inputs, this project employs a resistor ladder. This
+                    technique allows multiple switches to be read using a single analog input. When each button is pressed, it sends a
+                    unique voltage level to the input pin. Pressing two buttons simultaneously will result in a distinct input based on the
+                    combined resistance
+                </li>
+                <li><strong>Circuit Construction: </strong>The project involves setting up a piezo to the Arduino's pin 8. Switches are
+                    placed on a breadboard, with the first switch directly connected to power. Subsequent switches connect to power
+                    through resistors of varying resistances. All switch outputs converge at a single junction, which connects to both
+                    ground (via a resistor) and Analog In 0.</li>
+                <li><strong>Keyboard Design: </strong>To enhance the user experience, the project suggests creating a cardboard
+                    enclosure for the keyboard. This can be decorated to resemble a piano, with labels indicating the notes triggered by
+                    each button.</li>
+                <li><strong>Code Implementation: </strong>The Arduino code reads the analog value from the resistor ladder and
+                    determines which note to play based on the value. The tone() function is used to generate sounds, with the caveat
+                    that it can only produce square waves.</li>
+            </ul>
+            <br>
+
+            <h2>Applications and Extensions</h2>
+            <p>By replacing the switches and resistor ladder with analog sensors, the instrument's dynamics can be enhanced. For
+                instance, the sensor value could be used to modify the note's duration or create a range of sounds, akin to a
+                Theremin that I spoke about in the previous project, <a href=..project6/index.html>Here</a></p>
+            <br>
+
+            <h2>Conclusion</h2>
+            <p>By combining basic components with a touch of creativity, one can craft an instrument that's not only functional but
+                also a testament to the power of innovation. Whether you're a seasoned electronics enthusiast or a beginner looking
+                to dive into the world of DIY projects, this musical keyboard offers a harmonious blend of learning and fun.
+            </p>
+
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/blogSliderStyle.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <script src="js/blogSlider.js" defer></script>
+    <script src="js/sortblog.js"></script>
 </head>
 
 <body>
@@ -29,22 +29,25 @@
             </div>
 
             <div class="title">BLOG</div>
-            <p style="text-align: center;"> Welcome to my digital canvas, a space where imagination meets interactivity.
-                From the intricacies of
-                game design to the wonders of physical computing and beyond, I chronicle my adventures and discoveries
-                in the ever-evolving world of tech and creativity. Whether you're a fellow designer, a tech aficionado,
-                or simply curious, there's insight and inspiration awaiting you here.
+            <p>
+                programmer and game enthusiast!
             </p>
 
-            <!--
-            <p style="font-size: 12px; margin-bottom: -20px;">THINGS TO READ</p>
-            <h1 style="font-size: 40px;">Latest Articles<hr></h1>
-            -->
-
+            <div class="filter-buttons">
+                <button class="active-button" onclick="filterPosts('all')">All Posts</button>
+                <span>|</span>
+                <button onclick="filterPosts('altInt')">Alternative Interfaces</button>
+                <span>|</span>
+                <button onclick="filterPosts('games')">Games</button>
+                <span>|</span>
+                <button onclick="filterPosts('ai')">AI</button>
+                <span>|</span>
+                <button onclick="filterPosts('web')">Web</button>
+            </div>
         </div>
 
         <div class="all-entries">
-            <div class="grid-item">
+            <div class="grid-item" data-tag="altInt">
                 <div class="blogpost">
                     <div class="blogimg"><img src="Blog/470/project0/media/tinkercadthumbnail.png"></div>
                     <div class="blogtext">
@@ -56,10 +59,9 @@
                     <div class="blogbutton">
                         <a href="Blog/470/project0/index.html" class="button button1">Read More</a>
                     </div>
-
                 </div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-tag="altInt">
                 <div class="blogpost">
                     <div class="blogimg"><img src="Blog/470/project1/media/tinkercadthumbnail.png"></div>
                     <div class="blogtext">
@@ -74,13 +76,13 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" data-tag="ai">
                 <div class="blogpost">
                     <div class="blogimg"><img src="Blog/project1/media/thumbnail.png"></div>
                     <div class="blogtext">
                         <p>Date: 8/17/23</p>
                         <h2>Parallax Occlusion Mapping with AI-Generated Depth Maps</h2>
-                        <p>Unlocking the future of realistic textures: A deep dive into enhancing 3D illusions on 2D
+                        <p>A deep dive into enhancing 3D illusions on 2D
                             surfaces using
                             Parallax Occlusion Mapping and AI-powered MIDAS depth maps.
                         </p>
@@ -91,71 +93,103 @@
                 </div>
             </div>
 
+        </div>
 
-            <div class="all-entries">
-                <div class="grid-item">
-                    <div class="blogpost">
-                        <div class="blogimg"><img src="Blog/470/project2/media/tinkercadthumbnail.png"></div>
-                        <div class="blogtext">
-                            <p>Date: 9/8/23</p>
-                            <h2>Physical Comp and Alt Interfaces: Spaceship Interface</h2>
-                            <p>Here, I craft a dynamic control panel with blinking lights and switches reminiscent of a
-                                1970s space adventure.</p>
-                        </div>
-                        <div class="blogbutton">
-                            <a href="Blog/470/project2/index.html" class="button button1">Read More</a>
-                        </div>
+        <div class="all-entries">
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project2/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/8/23</p>
+                        <h2>Physical Comp and Alt Interfaces: Spaceship Interface</h2>
+                        <p>Here, I craft a dynamic control panel with blinking lights and switches reminiscent of a
+                            1970s space adventure.</p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project2/index.html" class="button button1">Read More</a>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <div class="blogpost">
-                        <div class="blogimg"><img src="Blog/470/project3/media/tinkercadthumbnail.png"></div>
-                        <div class="blogtext">
-                            <p>Date: 9/3/23</p>
-                            <h2>Physical Comp and Alt Interfaces: Love-O-Meter</h2>
-                            <p>Dive into the 'Love-o-Meter' project, where temperature sensing meets LED indicators!
-                            </p>
-                        </div>
-                        <div class="blogbutton">
-                            <a href="Blog/470/project3/index.html" class="button button1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="blogpost">
-                        <div class="blogimg"><img src="Blog/470/project4/media/tinkercadthumbnail.png"></div>
-                        <div class="blogtext">
-                            <p>Date: 9/13/23</p>
-                            <h2>Creating a Color Mixing Lamp with Photoresistors</h2>
-                            <p>A guide on creating a photoresistor lamp. A sophisticated blend of electronics and coding for discerning enthusiasts!
-                            </p>
-                        </div>
-                        <div class="blogbutton">
-                            <a href="Blog/470/project4/index.html" class="button button1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item">
-                    <div class="blogpost">
-                        <div class="blogimg"><img src="Blog/470/project5/media/tinkercadthumbnail.png"></div>
-                        <div class="blogtext">
-                            <p>Date: 9/19/23</p>
-                            <h2>Arduino and Servo Motors: A Deep Dive</h2>
-                            <p>From chapter 4 of the Arduino book using a dynamic indicator system using Arduino and servo motors, control the motor with just a twist of a
-                                knob.
-                            </p>
-                        </div>
-                        <div class="blogbutton">
-                            <a href="Blog/470/project5/index.html" class="button button1">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="item2">
-                <h2></h2>
             </div>
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project3/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/3/23</p>
+                        <h2>Physical Comp and Alt Interfaces: Love-O-Meter</h2>
+                        <p>Dive into the 'Love-o-Meter' project, where temperature sensing meets LED indicators!
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project3/index.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project4/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/13/23</p>
+                        <h2>Creating a Color Mixing Lamp with Photoresistors</h2>
+                        <p>A guide on creating a photoresistor lamp. A sophisticated blend of electronics and coding
+                            for discerning enthusiasts!
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project4/index.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="all-entries">
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project5/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/19/23</p>
+                        <h2>Arduino and Servo Motors: A Deep Dive</h2>
+                        <p>From chapter 4 of the Arduino book using a dynamic indicator system using Arduino and
+                            servo motors, control the motor with just a twist of a
+                            knob.
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project5/index.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project6/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/23/23</p>
+                        <h2>An Arduino-based Light Theremin Project</h2>
+                        <p>The Light Theremin project harnesses the power of Arduino, blending light detection
+                            with sound production to emulate
+                            a classic theremin instrument.
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project6/index.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item" data-tag="altInt">
+                <div class="blogpost">
+                    <div class="blogimg"><img src="Blog/470/project6/media/tinkercadthumbnail.png"></div>
+                    <div class="blogtext">
+                        <p>Date: 9/24/23</p>
+                        <h2>Building a Musical Keyboard with Arduino</h2>
+                        <p>Construct a simple musical keyboard using resistors and buttons, employing a resistor
+                            ladder technique to read
+                            multiple switches through a single analog input.
+                        </p>
+                    </div>
+                    <div class="blogbutton">
+                        <a href="Blog/470/project7/index.html" class="button button1">Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 </body>

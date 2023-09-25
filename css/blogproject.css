@@ -63,6 +63,35 @@ a {
     grid-area: 2 / 2 / 4 / 3;
 }
 
+.sidebar hr {
+    margin-top: 5%;
+}
+
+.sidebar img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.filter-buttons button {
+    /*margin: 4vw 2vw;*/
+    border: none;
+    font-family: "AvenirLight";
+    background-color: #1e1d21;
+    color: whitesmoke;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: .5vw;
+}
+
+.filter-buttons button:hover {
+    font-weight: bold;
+}
+
 .content {
     grid-area: 3 / 1 / 4 / 2;
     width: 135%;
@@ -72,7 +101,6 @@ a {
 
 .content h2 {
     width: 70%;
-    margin-top: 60px;
 }
 
 /*Sidebar*/
@@ -154,37 +182,40 @@ a:hover {
     padding: 0;
 }
 
-.content-wrapper {
-    display: flex;
-}
 
 .text {
     /* flex:0 1 auto; */
     flex-grow: 0;
 }
 
-.left-text p {
-    margin-right: 10%;
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.left-text {
+    max-width: 70%;
+}
+
+.parent>h2 {
+    padding: 10vw 0px;
+
 }
 
 .image {
-    /* flex:0 1 auto; */
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    height: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
 }
 
-.content-wrapper img {
-    max-width: 100%;
+.content-wrapper {
+    padding: 1vw 0px;
 }
 
 .content img {
     max-width: 100%;
-}
-
-.right-text {
-    margin-left: 10%;
 }
 
 .contact-small-page {
@@ -194,6 +225,28 @@ a:hover {
 
 .vertical-line {
     width: 137%;
+}
+
+/* For the CSV tables*/
+td {
+    font-size: 100%;
+    font-family: 'AvenirLight';
+    border: 2px solid #9C84B8;
+    padding: .5vw 1vw .25vw .5vw;
+    box-sizing: border-box;
+    /* This ensures padding and border are included in the total width and height */
+}
+
+#demoTable tr:first-child td {
+    font-family: 'Avenir';
+    font-style: italic;
+    font-size: 100%;
+}
+
+#demoTable {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
 /* Media Query for Tablets and Mobile devices */
