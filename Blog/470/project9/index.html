@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+      </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Motorized Pinwheel Project</h1>
+            <small>PUBLISHED ON <i>September 30, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio 1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image2.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>The Motorized Pinwheel project delves into the world of Arduino and motor control. It's
+                a project that not only introduces the basics of motor control using an Arduino but also highlights the intricacies
+                involved in managing high current and voltage loads. Let's dive into the project and explore what we've learned.
+            </p>
+            <br>
+            
+
+            <h2>Project Overview</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <p>The primary objective of the Motorized Pinwheel project is to get the Arduino to spin a colorful pinwheel using a
+                motor. While it might sound straightforward, controlling motors with an Arduino presents its own set of challenges.
+                For starters, motors require more current than the Arduino’s output pins can supply. Additionally, motors can
+                generate their own current through a process called induction, which can potentially damage the circuit if not
+                accounted for. </p>
+            <br>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <h2>Key Components and Their Roles</h2>
+                    <ul>
+                        <li><strong>Transistors</strong>These are solid-state devices that play a crucial role in this project.
+                            Transistors allow us to control high current and high voltage power sources from the low current output of the
+                            Arduino. Essentially, they act as digital switches. When voltage is provided to one of the transistor’s pins (the
+                            gate), it closes the circuit between the other two pins (the source and drain).</li>
+        
+                        <li><strong>Diodes:</strong>Diodes are polarized components that allow current to flow in one direction.
+                            In this project, a diode is used in parallel with the motor to ensure that any back-voltage generated by the motor
+                            doesn't damage the circuit. The diode ensures that this reverse voltage passes through it, protecting the rest of
+                            the circuit.</li>
+        
+                        <li><strong>Motor:</strong>The heart of the project. Motors require more current and sometimes a higher voltage than
+                            what the Arduino can provide. When a motor starts moving or has a heavy load attached, it draws as much current as
+                            it can. The Arduino's digital pins can only provide up to 40 milliamps (mA), which is much less than what most
+                            motors require.</li>
+                    </ul>
+                    
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+
+
+
+
+
+            <h2>Key Takeaways</h2>
+            <p>Project 9 offers valuable insights into the challenges of managing high current and voltage loads and provides practical solutions to overcome these challenges:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Understanding Motor Behavior:</strong>When energy is no longer supplied to a motor, it continues to spin due to
+                    inertia. This spinning can generate a voltage in the opposite direction of the supplied current. This reverse voltage,
+                    or back-voltage, can damage components like transistors if not managed properly.
+                </li>
+
+                <li>
+                    <strong>Importance of Diodes:</strong> The project emphasizes the importance of diodes in protecting circuits from
+                    back-voltage. By allowing electricity to flow in only one direction, diodes safeguard the rest of the circuit from
+                    potential damage.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

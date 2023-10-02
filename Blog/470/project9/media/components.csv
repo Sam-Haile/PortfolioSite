@@ -1,0 +1,8 @@
+﻿Name,Quantity,Component
+"U1",1," Arduino Uno R3"
+"S1",1," Pushbutton"
+"T1",1," nMOS Transistor (MOSFET)"
+"R1",1,"10 kΩ Resistor"
+"BAT1",1," 9V Battery"
+"M1",1," DC Motor"
+"D1",1," Diode"

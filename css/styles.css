@@ -72,3 +72,18 @@ a:visited {
   text-decoration: none;
 }
 
+footer {
+  display: flex;
+  background-color: #1e1d21;
+}
+
+.footerLink:first-child{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 4vw;
+}
+
+.footerLink a{
+  margin: 5px;
+  font-size: 20px;
+}

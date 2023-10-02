@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Creating a Digital Hourglass</h1>
+            <small>PUBLISHED ON <i>September 28, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image2.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>In today's digital age, traditional tools and instruments are being transformed into digital
+                counterparts. One such
+                transformation is the creation of a digital hourglass using Arduino. This project serves as a
+                time-tracking
+                tool and also provides insights into the capabilities of the Arduino platform and its built-in
+                functions.
+            </p>
+            <br>
+
+
+            <h2>Project Overview</h2>
+            <table id="demoTable"></table>
+            <br>
+
+
+
+            <div class="content-wrapper">
+                <div class="left-text">
+
+                    <h2>How It Works</h2>
+                    <p>The primary objective of this project is to build a digital hourglass that lights up an LED every ten
+                        minutes,
+                        allowing users to track time intervals. Traditionally, when one wanted to execute an action at a
+                        specific time
+                        interval using Arduino, the delay() function was employed. However, this function has its limitations.
+                        When delay()
+                        is called, the Arduino remains in a frozen state for the duration, preventing any other input or output.
+                        This is
+                        where the millis() function comes into play. It tracks the time since the Arduino started running,
+                        measured in
+                        milliseconds. This function offers a more flexible and efficient way to manage time intervals.</p>
+                    <br>
+
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" style="max-width: 14vw;">
+                </div>
+            </div>
+
+            <h2>Technical Insights</h2>
+            <ul>
+                <li><strong>Data Types and Storage:</strong>The project introduces the concept of different data
+                    types. For instance,
+                    while an integer (int) can store values between -32,768 and 32,767, it's insufficient for
+                    tracking milliseconds
+                    since the Arduino's start. This is why the unsigned long datatype is used, which can hold
+                    values between 0 and
+                    4,294,967,295.</li>
+
+                <li><strong>Tilt Switch Mechanism:</strong>The digital hourglass uses a tilt switch to determine
+                    its orientation. When
+                    tilted correctly, a ball inside the switch rolls to one side, connecting two leads and
+                    closing the switch. This
+                    mechanism is a cost-effective way to detect orientation, especially when compared to more
+                    advanced tools like
+                    accelerometers.</li>
+
+                <li><strong>Circuit Building:</strong>The project involves connecting six LEDs to the Arduino's
+                    digital pins. These LEDs
+                    light up in sequence, representing the passage of time. Additionally, a tilt switch is
+                    connected to determine the
+                    hourglass's orientation.</li>
+
+                <li><strong>Code Analysis:</strong>The Arduino code for this project uses the millis() function
+                    to track time. When the
+                    difference between the current time and the previous time exceeds a set interval (600,000
+                    milliseconds or 10
+                    minutes), an LED is turned on. The code also incorporates conditions to reset the LEDs based
+                    on the tilt switch's
+                    state.</li>
+            </ul>
+
+
+            <h2>Key Takeaways</h2>
+            <p>This project was especially informative in regards to the coding aspect of Arduino. Specifically:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Time Management With Arduino:</strong>The millis() function offers a more dynamic way to
+                    manage
+                    time intervals compared to the delay() function. It allows for multitasking, as the Arduino doesn't
+                    remain in a frozen
+                    state.
+                </li>
+
+                <li>
+                    <strong>Importance of Data Types:</strong>. Choosing the right data type is crucial, especially when
+                    dealing with large
+                    numbers. Understanding the range and limitations of each data type can prevent potential issues in
+                    projects.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Playfolio 1: An Analysis of my Workflow</h1>
+            <small>PUBLISHED ON <i>September 24, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../470/project6/index.html"><img src="../../470/project6/media/tinkercadthumbnail.png"> An
+                    Arduino-based Light Theremin Project</a></p>
+            <small>September 3, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+
+            <p>Im creating a mobile app and website with the objective of allowing users the ability to catalog video
+                games they
+                have played in the past. Furthermore, users will be afforded the opportunity to review, rate, and
+                discuss the games
+                they love.
+            </p>
+            <p>Today, I wanted to share my thought process in the initial phases of development for a web/mobile
+                application. Let's dive into the features and the tech stack that will power this platform.
+            </p>
+            <br>
+
+            <h2>Main Features and Functionalities</h2>
+            <ul>
+                <li><strong>User Profiles: </strong>From personalized avatars to game lists, create a profile that truly
+                    represents your gaming journey</li>
+                <li><strong>Game Archiving: </strong>Keep track of every game you've ever played, and even those you
+                    wish to play in the future.</li>
+                <li><strong>Discussion Forums: </strong>Engage in lively discussions on game-specific boards or general
+                    gaming topics</li>
+                <li><strong>Game Archiving: </strong>Share your thoughts on games, complete with spoiler tags and media
+                    uploads.</li>
+
+                <br>
+
+                <p>For a more extensive look at the basic features, please take a look at my <strong><a
+                            href="https://docs.google.com/document/d/1GN2UIQYJskyEeJ0O5zSiFU0dpTqgZfWyfmj4VVZKYs0/edit?usp=sharing">Design
+                            Document</a></strong></p>
+            </ul>
+            <br>
+
+            <h2>High-Level Architecture</h2>
+            <p>Given the project requirements and considering it's an individual project, I will be working with the
+                following stack to balance the ease of use and scalability:</p>
+            <br>
+
+            <ul>
+                <h3 style="margin-bottom: 0;">Web Frontend</h3>
+                <li><strong>React </strong>React is a popular JavaScript library for building user interfaces. It's
+                    component-based, which promotes reusability and modularity. There's a vast community, which means
+                    plenty of resources, tutorials, and third-party libraries</li>
+
+                <h3 style="margin-bottom: 0;">Mobile</h3>
+                <li><strong>React Native </strong>With React Native, I can use the same (or very similar) codebase for
+                    both iOS and Android apps. Because I'm already using React for the web frontend, much of my
+                    knowledge will transfer directly to React Native</li>
+
+                <h3 style="margin-bottom: 0;">Backend</h3>
+                <li><strong>Node.js with Express.js </strong>Node.js allows me to use JavaScript, the same language as
+                    the frontend, which can streamline the development process. Express.js is a minimal and flexible
+                    Node.js web application framework, making it easier to set up a server</li>
+
+                <h3 style="margin-bottom: 0;">Database</h3>
+                <li><strong>MongoDB </strong>It's a NoSQL database, which means it's flexible and can evolve with the
+                    application. With
+                    the Mongoose library in Node.js, working with MongoDB becomes even more straightforward. It's also
+                    part of the MERN
+                    stack (MongoDB, Express.js, React, Node.js), which is a popular combination</li>
+
+                <h3 style="margin-bottom: 0;">Hosting/Deployment</h3>
+                <li><strong>Heroku </strong>Heroku is beginner-friendly and supports Node.js applications out of the
+                    box. It also offers a free tier, which is great for someone like me who is new to this aspect of
+                    development</li>
+
+                <h3 style="margin-bottom: 0;">Version Control</h3>
+                <li><strong>Git with GitHub </strong>Git is essential for tracking changes, and GitHub provides a
+                    platform for hosting and collaborating (should I expand the team in the future)</li>
+
+
+            </ul>
+            <br>
+            <h2>Final Thoughts</h2>
+            <p>The MERN stack, combined with React Native, offers a unified development experience, especially for solo
+                developers
+                like me. By using JavaScript across the board, I can ensure a streamlined and efficient workflow, making
+                the
+                development process smoother and more enjoyable.
+            </p>
+
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>
