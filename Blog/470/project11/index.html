@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Process and Tools Used in the "Crystal Ball" Project</h1>
+            <small>PUBLISHED ON <i>October 8, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image2.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>The "Crystal Ball" project is an interesting project that leverages the capabilities of the Arduino
+                platform to
+                simulate a crystal ball. By asking a question to this electronic "all-knowing
+                ball" and simulating the motion of shaking it, users receive one of the predetermined answers displayed
+                on an LCD
+                screen.
+            </p>
+            <br>
+
+            <h2>The Circuitry</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <ul>
+                        <li>A tilt switch is placed on the breadboard, with one lead connected to 5V and the other
+                            connected to ground through a
+                            10-kilohm resistor. This setup configures it as a digital input.</li>
+
+                        <li>The LCD screen has several pins, including the register select (RS) pin, read/write (R/W)
+                            pin, enable (EN) pin, and data pins (D0-D7). However, only four data pins (D4-D7) are used
+                            in this project.</li>
+
+                        <li>The LiquidCrystal library, bundled with the Arduino software, simplifies the process of
+                            writing to these pins and displaying characters on the LCD.</li>
+                    </ul>
+
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+
+            <h2>Using the Crystal Ball</h2>
+            <ul>
+                <li>
+                    Once powered, the Arduino displays the introductory message on the LCD screen.
+                </li>
+                <li>Users can ask a question and tilt the switch to receive an answer.
+                </li>
+                <li>The LCD's contrast can be adjusted using a potentiometer.
+                </li>
+                <li>
+                    The underlying principle of LCDs involves changing the electrical properties of a liquid sandwiched
+                    between polarized glass. When charged, this liquid forms a semi-solid state, blocking light and
+                    creating visible characters.
+                </li>
+            </ul>
+            <br>
+
+            <h2>Conclusion</h2>
+            <p>By combining simple circuitry with the power of the LiquidCrystal library, users can create a fun and
+                interactive tool that mimics the experience of predicting the future. Whether for educational purposes
+                or sheer entertainment, this project showcases the potential of integrating hardware and software in
+                creative ways. </p>
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

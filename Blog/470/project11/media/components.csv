@@ -1,0 +1,7 @@
+﻿Name,Quantity,Component
+"U1",1," Arduino Uno R3"
+"U2",1," LCD 16 x 2"
+"R1",1,"10 kΩ Resistor"
+"Rpot1",1,"250 kΩ Potentiometer"
+"R2",1,"220 Ω Resistor"
+"U3",1," Tilt Sensor 4-pin"
