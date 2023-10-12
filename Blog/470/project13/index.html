@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>"Touchy-feely Lamp" Project</h1>
+            <small>PUBLISHED ON <i>October 14, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image2.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>In today's digital age, touch sensors have become an integral part of our daily lives. From smartphones
+                to home appliances, the ability to interact with devices through touch has revolutionized the way we
+                interact with technology. In this blog post, we'll delve into a fascinating project that allows you to
+                create a touch-sensitive lamp using the Arduino platform.
+            </p>
+            <br>
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+
+            <h2>The Concept</h2>
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <p>
+                        The "Touchy-feely Lamp" project is designed to turn a light on and off when you touch a piece of
+                        conductive material.
+                        The underlying principle is based on measuring the capacitance of the human body. Capacitance,
+                        in simple terms, is a
+                        measure of how much electrical charge an object can store.
+                    </p>
+                    <br>
+                    <p>
+                        The project utilizes the CapacitiveSensor library by Paul Badger. This library measures the time
+                        it takes for two pins
+                        on the Arduino (one sender and one receiver) to have the same state. These pins are connected to
+                        a metal object, such as
+                        aluminum foil. As a person gets closer to this object, their body absorbs some of the charge,
+                        causing a delay in the
+                        time it takes for the two pins to synchronize.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+            <br>
+
+            <h2>Conclusion</h2>
+            <p>The "Touchy-feely Lamp" project is a fantastic introduction to the world of touch sensors and offers a
+                hands-on experience in building a touch-sensitive device. It not only provides insights into the working
+                of capacitive touch sensors but also offers a practical application that can be used in everyday life.
+            </p>
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

@@ -215,6 +215,30 @@
   padding-right: 5%;
 }
 
+.tab-button:first-child{
+  margin-left: 5%;
+}
+
+.tab-button{
+  padding: 5px 20px;
+  font-size: clamp(5px, 1.5vw, 16px); 
+  border: none;
+  border-radius: 10px 10px 0px 0px;
+  outline: none;
+  background-color: #100f0f;
+  color:whitesmoke;
+}
+
+.tab-button:hover {
+  background-color: #100f0f;
+  color: #9C84B8;
+}
+
+.tab-button.active {
+  background-color: #9C84B8;
+  color: rgb(0, 0, 0);
+}
+
 .grid-item {
   display: flex;
   padding: 10%;
@@ -300,10 +324,6 @@
   display: none;
 }
 
-.img__container:hover .img__img {
-  display: none;
-}
-
 .img__container:hover .img__img { opacity: 0; /* Use the same delay for visibility but add the transition duration (1s in this case) to ensure it's only applied after the opacity transition completes */ transition: opacity 1s linear, visibility 0s linear 1s; visibility: hidden; } .img__img { opacity: 1; visibility: visible; /* Add a transition for opacity with a delay of 1 second (or however long you prefer) */ transition: opacity 1s linear; }
 
 .img__container:hover {
@@ -317,11 +337,6 @@
   transition: transform 0.3s ease-out;
   /* This line will ensure the smooth transition */
 }
-
-.img__container:hover .gameplay__gif {
-  display: block;
-}
-
 
 /*#endregion Projects */
 
@@ -466,18 +481,14 @@
   }
 }
 
-/*#endregion Smaller Screen Queries */
-.loadingSign {
-  display: none; /* Initially hidden */
-  width: 75px;
-  height: 75px;
-  border: 5px solid #252525;
-  border-top: 5px solid #9C84B8;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.hover__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition effect */
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.img__container:hover .hover__img {
+  opacity: 1; /* Show on hover */
 }

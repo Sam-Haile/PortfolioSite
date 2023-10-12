@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/homepageStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/resetGifs.js"></script>
-    <script src="js/gifloader.js"></script>
+    <script src="js/skillsFilter.js"></script>
     <title>Document</title>
 </head>
 
@@ -110,22 +110,31 @@
         <div class="section2"> <!-- Languages and Frameworks -->
             <div class="languages_frameworks">
                 <h1>Languages and Frameworks</h1>
+
+                <div class="tabs">
+                    <button class="tab-button active" onclick="filterItems('all')">All</button>
+                    <button class="tab-button" onclick="filterItems('languages')">Languages</button>
+                    <button class="tab-button" onclick="filterItems('game-development')">Game Development</button>
+                    <button class="tab-button" onclick="filterItems('web-development')">Web Technologies</button>
+                </div>
+
                 <div class="grid-container">
-                    <div class="grid-item"><img src="media/Icons/C++.png" alt="Icon of C++">C++</div>
-                    <div class="grid-item"><img src="media/Icons/CSharp.png" alt="Icon of C#">C#</div>
-                    <div class="grid-item"><img src="media/Icons/JavaScript.png" alt="Icon of JavaScript">JavaScript</div>
-                    <div class="grid-item"><img src="media/Icons/Python.png" alt="Icon of Python">Python </div>
-                    <div class="grid-item"><img src="media/Icons/HTML.png" alt="Icon of HTML">HTML</div>
-                    <div class="grid-item"><img src="media/Icons/CSS.png" alt="Icon of CSS">CSS</div>
-                    <div class="grid-item"><img src="media/Icons/unrealengine.png" alt="Icon of Unreal Engine">Unreal Engine</div>
-                    <div class="grid-item"><img src="media/Icons/Godot.png" alt="Icon of Godot">Godot</div>
-                    <div class="grid-item"><img src="media/Icons/Monogame.png" alt="Icon of Monogame">Monogame</div>
-                    <div class="grid-item"><img src="media/Icons/Unity.png" alt="Icon of Unity">Unity</div>
-                    <div class="grid-item"><img src="media/Icons/Blender.png" alt="Icon of Blender">Blender</div>
+                    <div class="grid-item all languages game-development"><img src="media/Icons/C++.png" alt="Icon of C++">C++</div>
+                    <div class="grid-item all languages game-development"><img src="media/Icons/CSharp.png" alt="Icon of C#">C#</div>
+                    <div class="grid-item all languages web-development game-development"><img src="media/Icons/JavaScript.png" alt="Icon of JavaScript">JavaScript</div>
+                    <div class="grid-item all languages"><img src="media/Icons/Python.png" alt="Icon of Python">Python </div>
+                    <div class="grid-item all languages web-development"><img src="media/Icons/HTML.png" alt="Icon of HTML">HTML</div>
+                    <div class="grid-item all languages web-development"><img src="media/Icons/CSS.png" alt="Icon of CSS">CSS</div>
+                    <div class="grid-item all game-development"><img src="media/Icons/unrealengine.png" alt="Icon of Unreal Engine">Unreal Engine</div>
+                    <div class="grid-item all game-development"><img src="media/Icons/Godot.png" alt="Icon of Godot">Godot</div>
+                    <div class="grid-item all game-development"><img src="media/Icons/Monogame.png" alt="Icon of Monogame">Monogame</div>
+                    <div class="grid-item all game-development"><img src="media/Icons/Unity.png" alt="Icon of Unity">Unity</div>
+                    <div class="grid-item all game-development"><img src="media/Icons/Blender.png" alt="Icon of Blender">Blender</div>
+                    <div class="grid-item all languages web-development"><img src="media/Icons/Nodejs.png" alt="Icon of Blender">Node.js</div>
+                    <!--<div class="grid-item all languages web-development"><img src="media/Icons/mongoDB.png" alt="Icon of Blender">MongoDB</div>-->
                     <!-- Add more items as needed -->
                 </div>
             </div>
-
         </div>
 
 
@@ -138,18 +147,16 @@
                             <div class="project1">
                                 <div class="img__container" data-gif="Portfolio/project9/media/gameplay.gif">
                                     <a href="Portfolio/project9/proj9.html">
-                                     <div class="loadingSign"></div>
-                                    <img class="img__img" src="Portfolio/project9/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                    <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                        <img class="img__img" src="Portfolio/project9/media/TitleScreenGif.gif" alt="Project Cover Art">
+                                        <img class="hover__img" src="Portfolio/project9/media/gameplay.gif" alt="Hover Image">
                                     </a>
                                 </div>
                             </div>
                             <div class="project2">
                                 <div class="img__container" data-gif="Portfolio/project11/media/gameplay.gif">
                                     <a href="Portfolio/project11/proj11.html">
-                                         <div class="loadingSign"></div>
                                         <img class="img__img" src="Portfolio/project11/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                        <img class="gameplay__gif" src=""  alt="Gif of gameplay">
+                                        <img class="hover__img" src="Portfolio/project11/media/gameplay.gif" alt="Hover Image">
                                     </a>
                                 </div>
                             </div>
@@ -157,9 +164,8 @@
                                 <div class="img__container" data-gif="Portfolio/project10/media/gameplay.gif">
                                     <a href="Portfolio/project10/proj10.html">
                                         <img class="img__img" src="Portfolio/project10/media/Spider-Man.gif" alt="Project Cover Art">
-                                         <div class="loadingSign"></div>
-                                        <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
-                                    </a>
+                                        <img class="hover__img" src="Portfolio/project10/media/gameplay.gif" alt="Hover Image">
+                                        </a>
                                 </div>
                             </div>
                         </div>
@@ -173,17 +179,15 @@
                             <div class="img__container" data-gif="Portfolio/project2/media/gameplay.gif">
                                 <a href="Portfolio/project2/proj2.html" >
                                 <img class="img__img" src="Portfolio/project2/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
-                                </a>
+                                <img class="hover__img" src="Portfolio/project2/media/gameplay.gif" alt="Hover Image">
+                            </a>
                             </div>
                         </div>
                         <div class="project2">
                             <div class="img__container" data-gif="Portfolio/project3/media/gameplay.gif">
                                 <a href="Portfolio/project3/proj3.html" >
                                 <img class="img__img" src="Portfolio/project3/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project3/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>
@@ -191,8 +195,7 @@
                             <div class="img__container" data-gif="Portfolio/project1/media/gameplay.gif">
                                 <a href="Portfolio/project1/proj1.html">
                                 <img class="img__img" src="Portfolio/project1/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project1/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>
@@ -214,8 +217,7 @@
                             <div class="img__container" data-gif="Portfolio/project4/media/gameplay.gif">
                                 <a href="Portfolio/project4/proj4.html" >
                                 <img class="img__img" src="Portfolio/project4/media/TitleScreenGif.gif" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project4/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>
@@ -223,8 +225,7 @@
                             <div class="img__container" data-gif="Portfolio/project7/media/gameplay.gif"> 
                                 <a href="Portfolio/project7/proj7.html">
                                 <img class="img__img" src="Portfolio/project7/media/TitleScreen.png" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project7/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>
@@ -239,8 +240,7 @@
                             <div class="img__container" data-gif="Portfolio/project8/media/gameplay.gif">
                                 <a href="Portfolio/project8/proj8.html">
                                 <img class="img__img" src="Portfolio/project8/media/TitleScreen.png" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project8/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>
@@ -248,8 +248,7 @@
                             <div class="img__container" data-gif="Portfolio/project6/media/gameplay.gif">
                                 <a href="Portfolio/project6/proj6.html">
                                 <img class="img__img" src="Portfolio/project6/media/TitleScreen.png" alt="Project Cover Art">
-                                <div class="loadingSign"></div>
-                                <img class="gameplay__gif" src=""  alt="Gif of gameplay" >
+                                <img class="hover__img" src="Portfolio/project6/media/gameplay.gif" alt="Hover Image">
                                 </a>
                             </div>
                         </div>

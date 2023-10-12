@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>"Knock Lock" Project</h1>
+            <small>PUBLISHED ON <i>October 12, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="media/tinkercadthumbnail.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="media/image2.png" alt="Tinkercad schematic view" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>The project revolves around creating a locking mechanism that can be unlocked using a specific knock
+                pattern. This
+                post aims to delve into the process of building the Knock Lock and the insights gained from it.
+            </p>
+            <br>
+
+            <h2>The Basics of the Knock Lock</h2>
+            <p>The Knock Lock is a unique mechanism that uses a piezo sensor to detect knocks or vibrations. When the
+                piezo is
+                pressed against a solid surface that can vibrate, like a wooden tabletop, it can sense the intensity of
+                a knock. By
+                utilizing this information, one can determine if a series of knocks fall within an acceptable range.
+                This mechanism
+                can be used to create a secret locking system to keep unwanted guests out of your space. </p>
+
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <ul>
+                        <li><strong>Piezo Sensor: </strong>This is the primary input device. When connected to 5V, it
+                            can detect vibrations which can be read by the Arduino's analog inputs. </li>
+
+                        <li><strong>LED Indicators: </strong>The system uses three LEDs. A red LED indicates that the
+                            box is locked, a green LED shows that the box is unlocked, and a yellow LED signifies a
+                            valid knock has been received.</li>
+
+                        <li><strong>Switch: </strong>This allows you to lock the motor in place.</li>
+
+                        <li><strong>Servo Motor: </strong>Used to lock and unlock based on the input from the piezo
+                            sensor.</li>
+
+                    </ul>
+
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+
+            <h2>Writing Your Own Functions</h2>
+            <p>The document emphasizes the importance of writing your own functions. Not only does this make the code
+                more readable,
+                especially for larger projects, but it also allows for better control over the code's flow. Over time,
+                as one writes
+                more code, they might accumulate a set of functions that can be reused across different projects, making
+                the coding
+                process faster and tailored to one's unique style. </p>
+            <br>
+
+            <h2>Conclusion</h2>
+            <p>The basic Knock Lock project simply counts the right number of knocks, irrespective of the time taken
+                between them.
+                However, one can make it more complex by introducing a timer using the millis() function. This would
+                allow the
+                system to detect a specific pattern of knocks based on both vibration intensity and timing. There are
+                numerous
+                examples online that delve deeper into this concept, and a simple search for "Arduino knock lock" can
+                provide more
+                advanced project ideas. </p>
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>
