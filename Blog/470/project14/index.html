@@ -36,8 +36,8 @@
             <hr>
         </div>
         <div class="title">
-            <h1>"Touchy-feely Lamp" Project</h1>
-            <small>PUBLISHED ON <i>October 14, 2023 </i> by Samuel Haile </small>
+            <h1>"Hack the Logo" Project</h1>
+            <small>PUBLISHED ON <i>October 22, 2023 </i> by Samuel Haile </small>
             <hr class="vertical-line" style="margin-top: 10px; ">
         </div>
         <div class="sidebar">
@@ -106,10 +106,9 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            <p>In today's digital age, touch sensors have become an integral part of our daily lives. From smartphones
-                to home appliances, the ability to interact with devices through touch has revolutionized the way we
-                interact with technology. In this blog post, we'll delve into a fascinating project that allows you to
-                create a touch-sensitive lamp using the Arduino platform.
+            <p>The project titled "Tweak the Arduino Logo" provides a hands-on approach to understanding the nuances of serial
+                communication between Arduino and Processing. The main objective is to change the background hue of the Arduino logo
+                using a potentiometer connected to the Arduino.
             </p>
             <br>
 
@@ -118,25 +117,24 @@
             <br>
 
 
-            <h2>The Concept</h2>
+            <h2>Arduino Setup</h2>
             <div class="content-wrapper">
                 <div class="left-text">
                     <p>
-                        The "Touchy-feely Lamp" project is designed to turn a light on and off when you touch a piece of
-                        conductive material.
-                        The underlying principle is based on measuring the capacitance of the human body. Capacitance,
-                        in simple terms, is a
-                        measure of how much electrical charge an object can store.
+                        The process begins with setting up the Arduino to initiate serial communication and transmit data. This data, which
+                        represents the potentiometer's position, is then interpreted by a Processing sketch. Instead of the conventional RGB
+                        mode, the project employs the HSB (Hue, Saturation, Brightness) color mode, offering a richer visual feedback as users
+                        adjust the hue through the potentiometer.
                     </p>
                     <br>
                     <p>
-                        The project utilizes the CapacitiveSensor library by Paul Badger. This library measures the time
-                        it takes for two pins
-                        on the Arduino (one sender and one receiver) to have the same state. These pins are connected to
-                        a metal object, such as
-                        aluminum foil. As a person gets closer to this object, their body absorbs some of the charge,
-                        causing a delay in the
-                        time it takes for the two pins to synchronize.
+                        The project not only emphasizes the power of serial communication as a conduit between hardware and software but also
+                        encourages users to experiment with different sensors, fostering a deeper understanding of interactive possibilities.
+                    </p>
+                    <br>
+                    <p>
+                        However, it's crucial to note a limitation: when the Arduino is engaged in serial communication with Processing, it
+                        cannot simultaneously communicate with other applications.
                     </p>
                 </div>
                 <div class="image">
@@ -146,9 +144,9 @@
             <br>
 
             <h2>Conclusion</h2>
-            <p>The "Touchy-feely Lamp" project is a fantastic introduction to the world of touch sensors and offers a
-                hands-on experience in building a touch-sensitive device. It not only provides insights into the working
-                of capacitive touch sensors but also offers a practical application that can be used in everyday life.
+            <p>The "Tweak the Arduino Logo" project offers a glimpse into the vast possibilities of integrating hardware and
+                software. By leveraging serial communication, developers and enthusiasts can create interactive and dynamic
+                applications.
             </p>
         </div>
     </div>
