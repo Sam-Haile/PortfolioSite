@@ -1,0 +1,9 @@
+﻿Name,Quantity,Component
+"U1",1,"Arduino Uno R3"
+"R1",1,"10 MΩ Resistor"
+"BAT1",1," 9V Battery"
+"SPEAKER1",2,"Speaker, 3W, 8Ω"
+"SDREADER1",1,"Micro SD Card Reader"
+"T1",1,"NPN Transistor (BJT)"
+"U6, U7, U2, U3, U4, U5",6,"TTP223B Capacitive Touch Sensor"
+"Plant",1,"Plant"

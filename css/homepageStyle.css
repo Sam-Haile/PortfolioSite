@@ -386,6 +386,18 @@
 /*#endregion General Styles */
 
 /*#region Smaller Screen Queries */
+/* Media query for smaller screens */
+@media (max-width: 1050px) {
+  .portfolio-buttons .project {
+    grid-template-columns: repeat(3,40%); /* Adjust the number of columns to 2 for smaller screens */
+    padding: 4vw; /* Increase padding */
+  }
+
+  .portfolio-buttons .img__container {
+    height: 22vh; /* Adjust the height if necessary */
+  }
+}
+
 
 @media (max-width: 768px) {
 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Crafting an Innovative Game Controller</h1>
+            <small>PUBLISHED ON <i>November 12, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 2</div>
+                    <img src="media/image1.jpg" alt="Image of components" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 2</div>
+                    <img src="media/image2.png" alt="Image of components" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+            <p> The inspiration for this project came from a desire to experiment with game controllers and to create
+                something unique. Gyroscopic controls are an immersive and physically engaging experience I wanted to create.
+                After some brainstorming, the idea of integrating an accelerometer to detect motion and using foot pedals for additional input came to life.
+            </p>
+            <br>
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <h2>Research</h2>
+            <p>
+                The research phase involved a deep dive into existing DIY controller projects and Arduino
+                tutorials. I found the <a href="https://projecthub.arduino.cc/"><strong> Arduino Project Hub </strong></a>
+                particularly helpful, as it offered insights into similar projects and essential
+                coding tips. Another invaluable resource was the <a
+                    href="https://learn.sparkfun.com/tutorials/accelerometer-basics/all"><strong> SparkFun guide to
+                    accelerometers</strong></a>, which provided a solid foundation in
+                understanding how to integrate motion sensing into my project.
+            </p>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <h2>Development</h2>
+                    <ul>
+                        <li><strong>Testing the Accelerometer:</strong> Before integrating it into the controller, I ran
+                            several tests with the Arduino to ensure I could accurately read the motion data</li>
+                        <li><strong>Programming the Arduino:</strong> This involved writing the code to interpret the
+                            accelerometer data and convert it into
+                            meaningful game input. I relied heavily on the<a
+                                href="https://www.arduino.cc/reference/en/"><strong> Arduino Language Reference</strong></a> and online
+                            tutorials for this part</li>
+                        <li><strong>Modifying the PS4 Controller: </strong>I had an old PS4 controller lying around so I
+                            took apart the controller, ensuring enough space for the accelerometer and the necessary
+                            wiring
+                        </li>
+                        <li><strong>Integrating the Pedals:</strong> The toy car pedals were attached to force sensors
+                            to act as the accelerator and brakes for the game</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+            <br>
+
+            <h2>Challenges</h2>
+            <p>One significant challenge was ensuring that the accelerometer's data was accurately translated into game controls.
+                This required fine-tuning the sensitivity and creating a calibration routine in the Arduino code. Another challenge
+                was the physical integration of the components into the PS4 controller without hindering its ergonomics. Strategic
+                placement and a bit of trial and error were key here.
+            </p>
+
+            <h2>Results</h2>
+            <p>The final product was a unique, motion-sensitive game controller with foot pedal inputs, offering a new level of
+                interaction and fun. It worked wonderfully with the racing games I created for this project, providing a more immersive experience than traditional
+                controllers.
+            </p>
+
+            <br>
+            <h2>Inspired-by Work and Technical References</h2>
+            <a href="https://maker.pro/arduino/tutorial/how-to-interface-arduino-and-the-mpu-6050-sensor">How to Interface Arduino and the MPU 6050 Sensor
+            </a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=FEnnMunFiMA&t=112s">How to Use Accelerometers on the Arduino - Ultimate Guide to the Arduino #42
+            </a>
+            <br>
+            <a href="https://docs.arduino.cc/">Arduino's offical documentation and forums</a>
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>

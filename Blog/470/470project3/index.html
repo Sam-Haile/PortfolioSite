@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../../css/blogproject.css">
+    <link rel="stylesheet" href="../../../css/fonts.css">
+    <link rel="stylesheet" href="../../../css/slideShow.css">
+    <script src="../../../js/sortblog.js"></script>
+    <script defer src="../../../js/csv.min.js"></script>
+    <script defer src="../../../js/1b-read-csv.js"></script>
+    <script>
+        var csvFilePath = "media/components.csv";
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <a href="../../../index.html">
+                <h1>Samuel Haile</h1>
+            </a>
+            <hr>
+            <hr style="margin-bottom: 5px;">
+            <div class="links">
+                <div class="item1"><a href="../../../index.html">Home</a></div>
+                <div class="item2"><a href="../../../blog.html">Blog</a></div>
+                <div class="item3"><a href="../../../index.html#portfolio">Projects</a></div>
+            </div>
+            <hr style="margin-top: 5px;">
+            <hr>
+        </div>
+        <div class="title">
+            <h1>Creating Art Using Arduino</h1>
+            <small>PUBLISHED ON <i>December 3, 2023 </i> by Samuel Haile </small>
+            <hr class="vertical-line" style="margin-top: 10px; ">
+        </div>
+        <div class="sidebar">
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+                <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+                <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+            </div>
+            <h2>Other Posts</h2>
+            <div class="filter-buttons">
+                <button onclick="navigateAndFilter('altInt')">Alternative Interfaces</button>
+                <button onclick="navigateAndFilter('games')">Games</button>
+                <button onclick="navigateAndFilter('ai')">AI</button>
+                <button onclick="navigateAndFilter('web')">Web</button>
+            </div>
+            <h2>Featured</h2>
+            <p><a href="../../WebApp/project1/index.html"><img src="../../WebApp/project1/media/image1.png"> Playfolio
+                    1: An Analysis of my Workflow</a></p>
+            <small>September 24, 2023</small>
+            <hr>
+            <p><a href="../../project1/index.html"><img src="../../project1/media/thumbnail.png">Parallax Occlusion
+                    Mapping with AI-Generated Depth Maps</a></p>
+            <small>August 17, 2023</small>
+            <hr>
+            <p><a href="../../470/project7/index.html"><img
+                        src="../../470/project7/media/tinkercadthumbnail.png">Building a Musical Keyboard with
+                    Arduino</a>
+            </p>
+            <small>September 3, 2023</small>
+            <hr>
+        </div>
+
+        <div class="contact-small-page">
+            <hr>
+            <a href="https://www.linkedin.com/in/samuel-haile-77140021b/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:sdh5898@g.rit.edu"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="media/Haile_Samuel_Resume.pdf"><i class="fa fa-regular fa-file"></i></a>
+            <a href="https://github.com/Sam-Haile"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="content">
+
+            <div class="slideshow-container-blog">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 1</div>
+                    <img src="media/image1.png" alt="Image of components" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="dots" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                </div>
+            </div>
+            <p> In the realm of creative technology, blending art with electronics opens up exciting possibilities. In
+                my recent
+                project, I created a drawing using ultrasonic sensors and an Arduino. This blog post outlines my
+                journey, from initial research to the final results, highlighting the
+                development process and the challenges faced along the way.
+            </p>
+            <br>
+
+            <h2>Components</h2>
+            <table id="demoTable"></table>
+            <br>
+
+            <h2>The Concept</h2>
+            <p>
+                The core idea is to use the ultrasonic sensors to detect distances in a 2D plane. These distances are
+                then mapped as
+                coordinates, which the Arduino uses to control a drawing mechanism, plotting points on a surface to
+                create an image.
+            </p>
+
+            <div class="content-wrapper">
+                <div class="left-text">
+                    <h2>Challenges</h2>
+                    <ul>
+                        <li><strong>Accuracy:</strong> Ultrasonic sensors have limitations in precision. Although I was
+                            short on time fine-tuning the setup and code can help improve accuracy.</li>
+                        <li><strong>Sensor Interference:</strong> Careful positioning and programming can mitigate
+                            interference between the two sensors.</li>
+                        <li><strong>Mechanical Limitations:</strong>The range of motion and precision of the drawing
+                            mechanism can affect the output. Choosing the right components is crucial.</li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <img src="media/gif1.gif" alt=" GIF of project" style="max-width: 15vw;">
+                </div>
+            </div>
+            <br>
+
+            <h2>Potential Enhancements:</h2>
+            <p>If I were to work on this project some more, here are some potential improvments I'd make to it:</p>
+            <ul>
+                <li>Adding an LCD display to show real-time sensor data or drawing progress.</li>
+                <li>Exploring different mediums or surfaces for drawing.</li>
+                <li>Incorporating a third dimension by adding another sensor or modifying the drawing mechanism.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>This Arduino project demonstrates how technology can be an avenue for artistic expression. By blending engineering
+                with creativity, we can unlock new possibilities and perspectives in both fields.
+            </p>
+            <br>
+           
+        </div>
+    </div>
+    <script src="../../../js/main.js"></script>
+
+</body>
+
+</html>
