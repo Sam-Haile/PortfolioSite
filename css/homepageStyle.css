@@ -338,6 +338,32 @@
   /* This line will ensure the smooth transition */
 }
 
+.latest-project {
+
+  display: flex;
+  padding: 15px;
+  gap: 5px;
+
+}
+
+.latest-project > div{
+  border-radius: 5px;
+  padding: 8px;
+}
+
+
+.item1 { 
+  /* flex:1 1 50%; */
+  flex-grow:1;
+  flex-basis:50%;
+}
+    
+.item2 { 
+  /* flex:0 2 50%; */
+  flex-shrink:2;
+  flex-basis:50%;
+}
+    
 /*#endregion Projects */
 
 /*#region General Styles */
