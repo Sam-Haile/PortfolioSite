@@ -32,8 +32,11 @@ body {
 }
 
 .section3 h1{
-  padding-left: 15%;
   font-family: 'Avenir';
+}
+
+#portfolio{
+  padding-left: 15%;
   padding-top: 5%;
 }
 
