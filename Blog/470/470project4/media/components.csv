@@ -1,3 +1,5 @@
 ﻿Name,Quantity,Component
-"PING1, PING2",2," Ultrasonic Distance Sensor"
 "U1",1," Arduino Uno R3"
+"U2",1," LCD 16 x 2"
+"KEYPAD1",1," Keypad 4x4"
+"SERVO1",1," Micro Servo"
