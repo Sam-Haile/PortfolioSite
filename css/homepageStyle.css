@@ -98,54 +98,55 @@
   height: 30px;
   /* Adjusted height */
   overflow: hidden;
-    margin-left: 1rem;
+  margin-left: 1rem;
+}
+
+.animation>div>div {
+  padding: 0.2rem 0.7rem;
+  /* Adjusted padding */
+  height: 1.65rem;
+  /* Adjusted height */
+  margin-bottom: 1.65rem;
+  /* Adjusted margin */
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+.first div,
+.second div,
+.third div {
+  background-color: #9C84B8;
+  color: rgb(16, 16, 16);
+}
+
+@keyframes text-animation {
+
+  0%,
+  10%,
+  90%,
+  100% {
+    margin-top: 0;
   }
-  
-  .animation>div>div {
-    padding: 0.2rem 0.7rem;
-    /* Adjusted padding */
-    height: 1.65rem;
-    /* Adjusted height */
-    margin-bottom: 1.65rem;
+
+  20%,
+  30%,
+  70%,
+  80% {
+    margin-top: -3.3rem;
     /* Adjusted margin */
-    display: inline-block;
   }
 
-  .animation div:first-child {
-    animation: text-animation 8s infinite;
+  40%,
+  60% {
+    margin-top: -6.6rem;
+    /* Adjusted margin */
   }
+}
 
-  .first div,
-  .second div,
-  .third div {
-    background-color: #9C84B8;
-    color: rgb(16, 16, 16);
-  }
-  @keyframes text-animation {
-
-    0%,
-    10%,
-    90%,
-    100% {
-      margin-top: 0;
-    }
-
-    20%,
-    30%,
-    70%,
-    80% {
-      margin-top: -3.3rem;
-      /* Adjusted margin */
-    }
-
-    40%,
-    60% {
-      margin-top: -6.6rem;
-      /* Adjusted margin */
-    }
-  }
-
-  /*#endregion First Section of Home Page*/
+/*#endregion First Section of Home Page*/
 
 /*#region Header*/
 
@@ -178,6 +179,7 @@
   opacity: 1;
   /* Show the color overlay on hover */
 }
+
 /*#endregion Header*/
 
 /*#region Languages and Frameworks */
@@ -215,18 +217,18 @@
   padding-right: 5%;
 }
 
-.tab-button:first-child{
+.tab-button:first-child {
   margin-left: 5%;
 }
 
-.tab-button{
+.tab-button {
   padding: 5px 20px;
-  font-size: clamp(5px, 1.5vw, 16px); 
+  font-size: clamp(5px, 1.5vw, 16px);
   border: none;
   border-radius: 10px 10px 0px 0px;
   outline: none;
   background-color: #100f0f;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 .tab-button:hover {
@@ -263,7 +265,7 @@
 
 /*#region Projects */
 
-.projects{
+.projects {
   background-color: #1e1d21;
 }
 
@@ -303,32 +305,44 @@
 /* Image wraps */
 .portfolio-buttons .img__container {
   position: relative;
-  height: 25vh;
+  height: 13vw;
   overflow: hidden;
 }
 
 .nav {
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0;       
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav li {  
- float:left;
- padding: 40px 80px;
- border: 1px solid silver;
- 
- background-color: #9e2828;
- background-size:40px;
- background-position: center;
- background-repeat: no-repeat;
+.nav li {
+  float: left;
+  padding: 40px 80px;
+  border: 1px solid silver;
+
+  background-color: #9e2828;
+  background-size: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gameplay__gif {
   display: none;
 }
 
-.img__container:hover .img__img { opacity: 0; /* Use the same delay for visibility but add the transition duration (1s in this case) to ensure it's only applied after the opacity transition completes */ transition: opacity 1s linear, visibility 0s linear 1s; visibility: hidden; } .img__img { opacity: 1; visibility: visible; /* Add a transition for opacity with a delay of 1 second (or however long you prefer) */ transition: opacity 1s linear; }
+.img__container:hover .img__img {
+  opacity: 0;
+  /* Use the same delay for visibility but add the transition duration (1s in this case) to ensure it's only applied after the opacity transition completes */
+  transition: opacity 1s linear, visibility 0s linear 1s;
+  visibility: hidden;
+}
+
+.img__img {
+  opacity: 1;
+  visibility: visible;
+  /* Add a transition for opacity with a delay of 1 second (or however long you prefer) */
+  transition: opacity 1s linear;
+}
 
 .img__container:hover {
   transform: scale(1.1);
@@ -344,69 +358,79 @@
 
 .latest-project {
   display: flex;
-  padding: 1% 15% ;
+  padding: 1% 15%;
   gap: 5px;
 }
 
-#latestProject{
+#latestProject {
   padding-top: 1%;
   padding-left: 17%;
 }
 
-.latest-project > div{
+.latest-project>div {
   border-radius: 5px;
   padding: 8px;
 }
 
-.item1 { 
-  flex-grow:1;
-  flex-basis:50%;
+.item1 {
+  flex-grow: 1;
+  flex-basis: 50%;
   width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.item1 > .img__container{
+.item1>.img__container {
+  position: relative;
   display: flex;
   justify-content: center;
   width: auto;
 }
 
-.hover__img{
-  height: 100%;
+.hover__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Smooth transition effect */
+}
+
+.img__img,
+.hover__img {
+  flex: 1; /* Grow to fill available space */
+  max-width: 100%; /* Set maximum width to prevent exceeding container width */
+  height: 100%; /* Set a fixed height */
   border-radius: 15px;
 }
 
-.img__img{
-  width: 100%;
-  border-radius: 15px;
+.item2 {
+  flex-shrink: 2;
+  flex-basis: 50%;
 }
 
-.item2 { 
-  flex-shrink:2;
-  flex-basis:50%;
-}
-
-.item2 p{
+.item2 p {
   padding: 0;
-   margin: 5% 10% 0 0;
-   font-size: clamp(12px, 1.5vw, 22px); 
+  margin: 0% 10% 0 10%;
+  font-size: clamp(12px, 1.5vw, 22px);
 }
 
-.latest-proj-text{
-  height: 75%;
-}
-
-.latest-project > .blogButton{
+.blogbutton {
   display: flex;
   align-items: flex-end;
-  height: 25%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+/* Show on hover */
+.img__container:hover .hover__img {
+  opacity: 1;
 }
 
 /*#endregion Projects */
 
 /*#region General Styles */
-  
+
 /* Styles for button*/
 .buttons {
   display: flex;
@@ -415,7 +439,7 @@
   padding-left: 13%;
   font-family: 'Avenir';
 }
-  
+
 .buttons>div {
   border-radius: 5px;
   /* Set a specific width for each button */
@@ -427,65 +451,61 @@
   /* Center content vertically */
   align-items: center;
 }
-  
+
 .buttons>div:last-child {
   /* Remove the right margin for the last button to avoid extra spacing on the right */
   margin-right: 0;
 }
-  
+
 .homeButton img {
   width: auto;
   height: 65px;
 }
-  
+
 .homeButton {
   margin-right: 50px;
   padding-top: 5px;
 }
-  
+
 .projectsButton,
 .blogButton {
   padding-right: 0%;
 }
-  
+
 /*#endregion General Styles */
 
 /*#region Smaller Screen Queries */
-/* Media query for smaller screens */
-@media (max-width: 1050px) {
-  .portfolio-buttons .project {
-    grid-template-columns: repeat(3,40%); /* Adjust the number of columns to 2 for smaller screens */
-    padding: 4vw; /* Increase padding */
-  }
-
-  .portfolio-buttons .img__container {
-    height: 22vh; /* Adjust the height if necessary */
-  }
-}
-
 
 @media (max-width: 768px) {
 
   .latest-project {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center items horizontally on smaller screens */
+    flex-direction: column;
+    /* Stack items vertically on smaller screens */
+    align-items: center;
+    /* Center items horizontally on smaller screens */
   }
 
-  .latest-project > div {
+  .latest-project>div {
     width: 100%;
   }
 
-  .item2 p a{
-    font-size: clamp(12px, 2.5vw, 32px); 
+  .item2 {
+    margin-top: 30px;
+  }
+  .item2 p{
+    margin: 0% 15% 0 0;
   }
 
-  .item2 a{
-    font-size: clamp(12px, 2.5vw, 18px); 
+  .item2 p, a {
+    font-size: clamp(14px, 2.5vw, 18px);
   }
-  
+
+  .blogbutton{
+    margin-left: 0;
+  }
+
   #latestProject {
     padding-left: 15%;
-    font-size: clamp(22px, 2.5vw, 18px); 
   }
 
   /* Flex Layout Adjustments */
@@ -555,7 +575,7 @@
     font-size: 2.5vw;
   }
 
-  .grid-container img{
+  .grid-container img {
     width: 4.5vw;
   }
 
@@ -578,16 +598,6 @@
     grid-row-gap: 35px;
     /* Adjust this value for the desired spacing */
   }
-}
 
-.hover__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition effect */
-}
 
-.img__container:hover .hover__img {
-  opacity: 1; /* Show on hover */
 }
