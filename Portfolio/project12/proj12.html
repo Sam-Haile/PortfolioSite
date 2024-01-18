@@ -18,14 +18,8 @@
     <title>Playfolio</title>
     <style>
         li::before {
-            content: "■";
-            display: inline-block;
-            width: 1em;
-            margin-left: 1px;
-            margin-top: 10px;
             color: rgb(58, 58, 58);
         }
-
         a:hover {
             color: rgb(58, 58, 58);
             text-decoration: none;
@@ -35,13 +29,15 @@
 
 <body>
 
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../../index.html">Projects</a>
-        <a href="../../media/Haile_Samuel_Resume.pdf">Resume</a>
+    <div class="sidebar">
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../../index.html" class="link1">Projects</a>
+            <a href="../../media/Haile_Samuel_Resume.pdf" class="link2">Resume</a>
+        </div>
     </div>
 
-    <div class="headers">
+    <div class="hamburger">
         <div class="homeButton"><a href="../../index.html"><img src="../../media/Icons/Logo.png" alt="Home Button"></a>
         </div>
         <div><button class="openbtn" onclick="openNav()">☰</button> </div>
@@ -99,14 +95,14 @@
                 </header>
 
                 <article style="background-color: rgb(58, 58, 58); color: whitesmoke;">
-                    <section class id="key_features">
+                    <div id="key_features">
                         <h2>Design Process</h2>
                         <p>
                             The design prioritizes responsivness, ensuring a consistent user experience across various devices, including mobile
                             phones, tablets, and desktops. Regular user feedback sessions and usability testing were and will continue to be conducted to identify areas
                             of improvement and ensure the platform remains user-centric.
                         </p>
-                    </section>
+                    </div>
                 </article>
 
                 <section>
