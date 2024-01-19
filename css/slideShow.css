@@ -64,7 +64,7 @@ iframe {
   position: absolute;
   top: 0;
   background-color: rgb(255, 255, 255);
-  border-radius: 0px 0px 10px 0px;
+  border-radius: 10px 0px 10px 0px;
 }
 
 /* The dots/bullets/indicators */

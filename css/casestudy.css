@@ -4,12 +4,15 @@ body {
     scroll-behavior: smooth;
     background-color: rgb(16, 16, 16);
     color: whitesmoke;
+    word-wrap: break-word;
 }
 
-h1,
+h1 {
+    font-size: 40px;
+}
+
 h2 {
-    margin-top: 0%;
-    font-family: 'Recoleta';
+    font-size: 0px;
 }
 
 a,
@@ -27,6 +30,7 @@ ul {
 p {
     font-family: 'AvenirLight';
     justify-content: space-between;
+    font-size: 22px;
 }
 
 .hamburger {
@@ -47,14 +51,25 @@ p {
 @media screen and (min-width: 760px) {
     #wrapper {
         display: grid;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-columns: 30% 30% auto;
         grid-template-areas:
-            "header header sidebar"
-            "article article sidebar"
-            " section section sidebar"
+            "images images sidebar"
+            "section1 section1 section1"
+            "section2 section2 section2"
+            "section3 section3 section3"
             "footer footer footer"
     }
+}
+
+.boxGrid{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+}
+
+#box1{
 }
 
 .openbtn {
@@ -128,39 +143,19 @@ footer {
     padding-bottom: 2.0rem;
 }
 
-#key_features {
-    padding: 1rem;
-}
+
 
 img {
     object-fit: contain;
     width: 100%;
-}
-
-header {
-    /*Slideshow*/
-    grid-area: header;
-    overflow: hidden;
-    margin-left: 25%;
-}
-
-article {
-    grid-area: article;
-    border-radius: 10px;
-    margin-top: 5%;
-    margin-left: 25%;
+    border-radius: 10%;
 }
 
 aside {
     grid-area: sidebar;
     margin-left: 5%;
     margin-right: 25%;
-}
-
-section {
-    grid-area: section;
-    margin-left: 13%;
-    margin-top: 10px;
+    margin-top: 15%;
 }
 
 section,
@@ -170,6 +165,35 @@ article {
     padding: .5rem;
     word-wrap: break-word;
 }
+
+section
+{
+    margin: 5% 20% 0% 20%;
+}
+
+#images {
+    /*Slideshow*/
+    grid-area: images;
+    overflow: hidden;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+#section1 {
+    grid-area: section1;
+    border-radius: 10px;
+}
+
+
+
+#section2 {
+    grid-area: section2;
+}
+
+#section3 {
+    grid-area: section3;
+}
+
 
 .sidepanel {
     width: 0;
@@ -194,7 +218,7 @@ article {
     transition: 0.3s;
 }
 
-.sidepanel a:not(.closebtn){
+.sidepanel a:not(.closebtn) {
     margin: 5px 10px;
 }
 
@@ -211,7 +235,7 @@ article {
     grid-area: 1 / 1 / 2 / 2;
     margin-top: 25%;
     margin-left: 65%;
-} 
+}
 
 @media (max-width: 760px) {
     /*Handles elements at smaller screen*/
@@ -230,10 +254,12 @@ article {
         height: auto;
         grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-            "header"
+            "images"
             "sidebar"
             "article"
-            "section"
+            "section1"
+            "section2"
+            "section3"
             "aboutMe"
             "footer"
     }
@@ -259,7 +285,7 @@ article {
     article {
         padding: 20px 40px;
         margin: 10% 0% 10% 5%;
-        border-radius: 10px 0 0 10px;
+        /* border-radius: 10px 0 0 10px; */
     }
 
     aside {
@@ -279,62 +305,3 @@ article {
         display: flex;
         justify-content: center;
     }
-
-
-    /* .image {
-        margin-bottom: 90px;
-    }
-            .playOption {
-        display: none;
-    } */
-    /* .secondImage {
-        transform: rotate(90deg);
-        width: 100%;
-    } */
-
-
-    /* 
-    .secondImage img {
-        transform: rotate(-90deg);
-        height: 90%;
-    } */
-    /* .item1>img {
-        display: none;
-    }
-
-    .item1 {
-        width: 10px;
-        flex-grow: 0;
-        padding: 5px 0px;
-    }
-
-    .item2 {
-        flex-grow: 1;
-        padding-top: 50px;
-        margin-right: 10%;
-        margin-left: 5%
-    } */
-
-
-    /* .one {
-        flex: 2;
-    }
-
-    .two {
-        flex: 2;
-    }
-
-    .three {
-        flex: 2;
-    }
-
-    .four {
-        flex: 2;
-    }
-
-    .five {
-        flex: 2;
-    } */
-
-
-}
