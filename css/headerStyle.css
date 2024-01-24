@@ -9,19 +9,10 @@
 
 .buttons>div {
   border-radius: 5px;
-  /* Set a specific width for each button */
   width: 100px;
-  /* Set a specific height for each button */
   height: 50px;
-  /* To center the content inside each button */
   display: flex;
-  /* Center content vertically */
   align-items: center;
-}
-
-.buttons>div:last-child {
-  /* Remove the right margin for the last button to avoid extra spacing on the right */
-  margin-right: 0;
 }
 
 .homeButton img {
@@ -36,10 +27,19 @@
 .homeButton {
   margin-right: 50px;
   padding-top: 5px;
+  flex-grow: 1;
+}
+
+.blogButton{
+  margin-right: 15%;
+}
+
+.caseStudyButton{
+  margin-right: 30px;
 }
 
 .projectsButton,
-.blogButton {
+.blogButton{
   padding-right: 0%;
 }
 

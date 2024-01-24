@@ -277,29 +277,26 @@
 }
 
 /* Grid */
-.portfolio-buttons .project {
+.portfolio-buttons .project,
+.case-studies {
   display: grid;
-  grid-template-columns: repeat(3, 33.3%);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   width: 100%;
   margin: 0 auto;
-  /* This should center the grid */
-  /* Centers the grid horizontally */
   justify-content: center;
-  /* Centers the grid items horizontally */
   align-items: center;
-  /* Centers the grid items vertically */
+  padding: 2vw 0px;
+  justify-items: center;
+  width: 75vw;
+}
+.portfolio-buttons .project {
+  grid-template-columns: repeat(3, 33.3%);
 }
 
-.portfolio-buttons .project {
-  justify-items: center;
-  /* Centers grid items horizontally */
-  align-items: center;
-  /* Centers grid items vertically */
-  padding: 2vw 0px;
-  width: 75vw;
+.case-studies{
+  grid-template-columns: repeat(2, 33.3%);
 }
 
 /* Image wraps */
@@ -364,7 +361,7 @@
 
 #latestProject {
   padding-top: 1%;
-  padding-left: 17%;
+  padding-left: 15%;
 }
 
 .latest-project>div {
@@ -404,78 +401,54 @@
   border-radius: 15px;
 }
 
-.item2 {
+.latestProjImg{
+  flex: 1; /* Grow to fill available space */
+  max-width: 100%; /* Set maximum width to prevent exceeding container width */
+  height: 100%; /* Set a fixed height */
+  border-radius: 15px;
+}
+
+.item2{
   flex-shrink: 2;
   flex-basis: 50%;
-}
-
-.item2 p {
-  padding: 0;
-  margin: 0% 5% 0 5%;
   font-size: clamp(12px, 1.5vw, 22px);
+  margin-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
 }
 
-.blogbutton {
-  display: flex;
-  align-items: flex-end;
-  margin-left: 10%;
-  margin-top: 5%;
+.latest-proj-text{
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin-left: 20px;
+}
+
+.blogbutton{
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin-left: 20px;
 }
 
 /* Show on hover */
 .img__container:hover .hover__img {
   opacity: 1;
 }
-
 /*#endregion Projects */
 
-/*#region General Styles */
-
-/* Styles for button*/
-.buttons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 13%;
-  font-family: 'Avenir';
-}
-
-.buttons>div {
-  border-radius: 5px;
-  /* Set a specific width for each button */
-  width: 100px;
-  /* Set a specific height for each button */
-  height: 50px;
-  /* To center the content inside each button */
-  display: flex;
-  /* Center content vertically */
-  align-items: center;
-}
-
-.buttons>div:last-child {
-  /* Remove the right margin for the last button to avoid extra spacing on the right */
-  margin-right: 0;
-}
-
-.homeButton img {
-  width: auto;
-  height: 65px;
-}
-
-.homeButton {
-  margin-right: 50px;
-  padding-top: 5px;
-}
-
-.projectsButton,
-.blogButton {
-  padding-right: 0%;
-}
-
-/*#endregion General Styles */
-
 /*#region Smaller Screen Queries */
-
 @media (max-width: 768px) {
 
   .latest-project {
@@ -487,17 +460,6 @@
 
   .latest-project>div {
     width: 100%;
-  }
-
-  .item2 {
-    margin-top: 30px;
-  }
-  .item2 p{
-    margin: 0% 15% 0 0;
-  }
-
-  .item2 p, a {
-    font-size: clamp(14px, 2.5vw, 18px);
   }
 
   .blogbutton{
@@ -599,5 +561,8 @@
     /* Adjust this value for the desired spacing */
   }
 
+  .portfolio-buttons .img__container {
+    height: 25vw;
+  }
 
 }

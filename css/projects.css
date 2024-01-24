@@ -135,6 +135,7 @@ footer {
 img {
     object-fit: contain;
     width: 100%;
+    border-radius: 10px;
 }
 
 header {
@@ -279,62 +280,5 @@ article {
         display: flex;
         justify-content: center;
     }
-
-
-    /* .image {
-        margin-bottom: 90px;
-    }
-            .playOption {
-        display: none;
-    } */
-    /* .secondImage {
-        transform: rotate(90deg);
-        width: 100%;
-    } */
-
-
-    /* 
-    .secondImage img {
-        transform: rotate(-90deg);
-        height: 90%;
-    } */
-    /* .item1>img {
-        display: none;
-    }
-
-    .item1 {
-        width: 10px;
-        flex-grow: 0;
-        padding: 5px 0px;
-    }
-
-    .item2 {
-        flex-grow: 1;
-        padding-top: 50px;
-        margin-right: 10%;
-        margin-left: 5%
-    } */
-
-
-    /* .one {
-        flex: 2;
-    }
-
-    .two {
-        flex: 2;
-    }
-
-    .three {
-        flex: 2;
-    }
-
-    .four {
-        flex: 2;
-    }
-
-    .five {
-        flex: 2;
-    } */
-
 
 }

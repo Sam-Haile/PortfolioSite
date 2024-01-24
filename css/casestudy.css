@@ -7,18 +7,29 @@ body {
     word-wrap: break-word;
 }
 
-h1 {
+h1{
     font-size: 40px;
 }
 
+h1:not(.ignore) {
+    padding-top: 40px;
+}
+
 h2 {
-    font-size: 0px;
+    font-size: 25px;
 }
 
 a,
 h3,
 h4 {
     font-family: 'Avenir';
+}
+
+li::before {
+    content: "■";
+    display: inline-block;
+    width: 1em;
+    margin-top: 10px;
 }
 
 ul {
@@ -29,8 +40,7 @@ ul {
 
 p {
     font-family: 'AvenirLight';
-    justify-content: space-between;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .hamburger {
@@ -43,33 +53,38 @@ p {
     padding-right: 3%;
 }
 
-.redSquares li {
-    /*Spacing between bullet points*/
-    margin-bottom: 2%;
-}
-
 @media screen and (min-width: 760px) {
     #wrapper {
         display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 30% 30% auto;
+        grid-template-rows:  auto;
+        grid-template-columns: auto;
         grid-template-areas:
-            "images images sidebar"
-            "section1 section1 section1"
-            "section2 section2 section2"
-            "section3 section3 section3"
-            "footer footer footer"
+            "section1a"
+            "background1"
+            "section1b"
+            "background2"
+            "section1c"
+            "background3"
+            "section1d"
+            "footer"
     }
 }
 
-.boxGrid{
+.boxGrid {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
-    gap: 16px;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
-#box1{
+#box1,
+#box2,
+#box3 {
+    width: 30%;
+}
+
+.boxGrid p {
+    font-size: 18px;
 }
 
 .openbtn {
@@ -108,13 +123,6 @@ a:active {
     text-decoration: none;
 }
 
-li::before {
-    content: "■";
-    display: inline-block;
-    width: 1em;
-    margin-left: 1px;
-    margin-top: 10px;
-}
 
 footer {
     grid-area: footer;
@@ -143,57 +151,109 @@ footer {
     padding-bottom: 2.0rem;
 }
 
-
-
 img {
     object-fit: contain;
     width: 100%;
-    border-radius: 10%;
-}
-
-aside {
-    grid-area: sidebar;
-    margin-left: 5%;
-    margin-right: 25%;
-    margin-top: 15%;
+    border-radius: 5%;
 }
 
 section,
-aside,
 article {
     /*General body styling*/
     padding: .5rem;
     word-wrap: break-word;
 }
 
-section
-{
-    margin: 5% 20% 0% 20%;
+section:not(.background) {
+    margin: 0% 15% 0% 15%;
 }
 
-#images {
-    /*Slideshow*/
-    grid-area: images;
-    overflow: hidden;
-    margin-left: 25%;
-    margin-top: 10%;
+
+.intro {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+    max-width: 100%;
+    margin: 5% 15% 0% 15%;
 }
 
-#section1 {
-    grid-area: section1;
+.item1 {
+    align-self: center;
+}
+
+.item2{
+    width: 50%;
+}
+
+.item1, .item2{
+    margin: 20px;
+}
+
+#section1a {
+    grid-area: section1a;
     border-radius: 10px;
 }
 
-
-
-#section2 {
-    grid-area: section2;
+#background1{
+    grid-area: background1;
+}
+#section1b{
+    grid-area: section1b;
+}
+#background2{
+    grid-area: background2;
+}
+#section1c{
+    grid-area: section1c;
+    padding-top: 20px;
+}
+#background3{
+    grid-area: background3;
+}
+#section1d{
+    grid-area: section1d;
 }
 
-#section3 {
-    grid-area: section3;
+#background1,
+#background2,
+#background3 {
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(41, 41, 41);
+    padding-left: 6%;
+    margin: 0% 0% 0% 10%;
+    overflow-x:hidden;
 }
 
+.backgroundColor{
+    margin: 4% 20% 4% 0%;
+}
+
+.backgroundColor h1{
+    padding: 0;
+}
+
+.twopanel {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tpItem1 {
+    width: 50%;
+    align-self: center;
+}
+
+.tpItem2{
+    margin-left: 75px;
+    align-self: center;
+    width: 50%;
+    font-size: 18px;
+}
+
+.tpItem2 li{
+    padding-bottom: 10%;
+}
 
 .sidepanel {
     width: 0;
@@ -237,8 +297,13 @@ section
     margin-left: 65%;
 }
 
+.quotesImgMobile{display: none;}
+
 @media (max-width: 760px) {
     /*Handles elements at smaller screen*/
+    p{
+        font-size: 18px;
+    }
 
     .hamburger {
         display: flex;
@@ -249,18 +314,58 @@ section
         padding-left: 3%;
     }
 
+    .intro{
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+        margin: 0% 5% 0% 5%;
+    }
+
+    .item2{
+        width: 100%;
+        margin: 0;
+    }
+
+    .item2 h1{
+        font-size: 28px;
+    }
+
+    .twopanel{
+        flex-direction: column;
+    }
+
+    .tpItem1{
+        width: 100%;
+    }
+
+    .tpItem2{
+        margin: 0%;
+        width: 100%;
+    }
+
+    .boxGrid{
+        flex-direction: column;
+    }
+    
+    #box1, #box2, #box3{
+        width: 100%;
+    }
+
+    .quotesImgMobile{
+        display: block;
+    }
+
+    .quotesImg{
+        display: none;
+    }
+
     #wrapper {
         display: grid;
         height: auto;
         grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-            "images"
-            "sidebar"
             "article"
             "section1"
-            "section2"
-            "section3"
-            "aboutMe"
             "footer"
     }
 
@@ -277,19 +382,18 @@ section
     }
 
     section {
-        grid-area: section;
         overflow: visible;
         margin: 0% 5% 0% 5%;
+    }
+
+    #section1{
+        grid-area: section1;
     }
 
     article {
         padding: 20px 40px;
         margin: 10% 0% 10% 5%;
         /* border-radius: 10px 0 0 10px; */
-    }
-
-    aside {
-        margin: 0% 10%;
     }
 
     .footerLink {
@@ -305,3 +409,4 @@ section
         display: flex;
         justify-content: center;
     }
+}
