@@ -11,10 +11,6 @@ h1{
     font-size: 40px;
 }
 
-h1:not(.ignore) {
-    padding-top: 40px;
-}
-
 h2 {
     font-size: 25px;
 }
@@ -364,9 +360,14 @@ section:not(.background) {
         height: auto;
         grid-template-rows: auto auto auto auto auto auto;
         grid-template-areas:
-            "article"
-            "section1"
-            "footer"
+        "section1a"
+        "background1"
+        "section1b"
+        "background2"
+        "section1c"
+        "background3"
+        "section1d"
+        "footer"
     }
 
     .navigation {
